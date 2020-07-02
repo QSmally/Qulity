@@ -1,0 +1,25 @@
+{
+  "name": "qulity",
+  "version": "0.0.0",
+  "description": "Reserved - A data management utility",
+  "main": "Qulity.js",
+  "scripts": {
+    "test": "echo \"Qulity has not yet started\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QSmally/Qulity.git"
+  },
+  "keywords": [
+    "Data",
+    "Management",
+    "Utility",
+    "QDB"
+  ],
+  "author": "QSmally",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/QSmally/Qulity/issues"
+  },
+  "homepage": "https://github.com/QSmally/Qulity#readme"
+}
