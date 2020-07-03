@@ -2,4 +2,4 @@
 # Qulity
 ### A data management utility
 
-Qulity has not yet started development, but will be very shortly.
+Qulity has started development, but is not stable for use.
