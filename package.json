@@ -11,14 +11,14 @@
   },
 
   "keywords": [
-    "Data",
-    "Management",
-    "Utility",
+    "data",
+    "management",
+    "utility",
     "QDB"
   ],
 
   "homepage":   "https://qdb.qbot.eu/",
-  "repository": "github:QSmally/QDB",
+  "repository": "github:QSmally/Qulity",
 
   "author":  "QSmally",
   "license": "MIT",
