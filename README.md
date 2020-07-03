@@ -4,7 +4,7 @@
 
 **Qulity is still heavily under development.**
 
-> Qulity is a utility which allows you to enhance native JavaScript Maps & other classes with additional methods.
+> Qulity is a utility module which provides you enhanced versions of the native JavaScript Map & other classes with additional methods and optimisations.
 
 
 # Main Features
