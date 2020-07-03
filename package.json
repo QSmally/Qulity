@@ -1,25 +1,28 @@
 {
   "name": "qulity",
   "version": "0.0.0",
-  "description": "Reserved - A data management utility",
+  "description": "A data management utility",
   "main": "Qulity.js",
+
   "scripts": {
-    "test": "echo \"Qulity has not yet started\""
+    "main":      "node -v && npm -v && node .",
+    "test":      "node Test/Main.js",
+    "benchmark": "node Test/Benchmark.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/QSmally/Qulity.git"
-  },
+
   "keywords": [
     "Data",
     "Management",
     "Utility",
     "QDB"
   ],
-  "author": "QSmally",
+
+  "homepage":   "https://qdb.qbot.eu/",
+  "repository": "github:QSmally/QDB",
+
+  "author":  "QSmally",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/QSmally/Qulity/issues"
-  },
-  "homepage": "https://github.com/QSmally/Qulity#readme"
+  }
 }
