@@ -7,7 +7,7 @@
     Originally included in project QSmally/QDB.
 
     Obviously the Node runtime is not created by myself,
-    they're created by their respective owners.
+    it's created by their respective owners.
     All rights are reserved.
 */
 
