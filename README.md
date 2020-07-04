@@ -26,3 +26,9 @@ const Qulity = require("qulity");
 
 # Usage
 For QDB usage, check out [the Github](https://github.com/QSmally/QDB#README).
+
+#### [Collection](https://qdb.qbot.eu/documentations/qulity/collection)
+An extended JavaScript Map with additional utility methods.
+```js
+const Collection = new Qulity.Collection(Iterable?);
+```
