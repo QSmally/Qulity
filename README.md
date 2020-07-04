@@ -8,7 +8,7 @@
 
 
 # Main Features
-* [Collections](https://qdb.qbot.eu/documentations/qulity/collection), enhanced Map classes.
+* [Collection](https://qdb.qbot.eu/documentations/qulity/collection), an enhanced Map class.
 
 ## Links
 * [Website](https://qdb.qbot.eu/)
