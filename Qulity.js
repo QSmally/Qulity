@@ -12,4 +12,8 @@
 */
 
 
-module.exports = {};
+module.exports = {
+
+    Collection: require("./lib/Maps/Collection")
+
+};
