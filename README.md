@@ -27,8 +27,13 @@ const Qulity = require("qulity");
 # Usage
 For QDB usage, check out [the Github](https://github.com/QSmally/QDB#README).
 
-#### [Collection](https://qdb.qbot.eu/documentations/qulity/collection)
+### [Collection](https://qdb.qbot.eu/documentations/qulity/collection)
 An extended JavaScript Map with additional utility methods.
 ```js
 const Collection = new Qulity.Collection(Iterable?);
 ```
+
+# Issues, Contributing & License
+If you've found a bug or want to suggest a feature, please ensure that it hasn't already been reported/suggested - Then, feel free to create an issue! If you'd like to contribute to the project, feel free to fork [the repository](https://github.com/QSmally/Qulity) and create a pull request.
+
+This module is licensed under [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0).
