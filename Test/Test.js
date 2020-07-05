@@ -72,4 +72,32 @@ module.exports = (Qulity, Tap) => {
     let UnsortedCol = new Qulity.Collection({"foo": 347, "bar": 92, "roo": 287, "doo": 38, "boo": 734});
     Tap("Collection#sort", UnsortedCol.sort((a, b) => b - a).toArray(), [734, 347, 287, 92, 38]);
 
+
+    // DataStore
+    const DS = new Qulity.DataStore([
+        ["foo", {content: 1}],
+        ["bar", {content: 2}],
+        ["roo", {content: 3}],
+        ["doo", {content: 4}],
+    ]);
+
+    Tap("DataStore#size1", DS.size, 4);
+
+    DS.delete("roo");
+    Tap("DataStore#size2", DS.size, 3);
+
+    Tap("DataStore#LRR1", DS.LRR, null);
+
+    Tap("DataStore#resolve1", DS.resolve("doo"), {content: 4, _DataStore: "doo"});
+    Tap("DataStore#LRR2", DS.LRR, {content: 4, _DataStore: "doo"});
+    Tap("DataStore#resolve2", DS.resolve("foo"), {content: 1, _DataStore: "foo"});
+    Tap("DataStore#LRR3", DS.LRR, {content: 1, _DataStore: "foo"});
+
+    DS.delete("foo");
+    Tap("DataStore#size3", DS.size, 2);
+    Tap("DataStore#LRR4", DS.LRR, null);
+
+    Tap("DataStore#resolve3", DS.resolve("foo"), undefined);
+    Tap("DataStore#LRR5", DS.LRR, null);
+
 }
