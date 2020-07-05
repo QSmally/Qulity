@@ -9,6 +9,7 @@
 
 # Main Features
 * [Collection](https://qdb.qbot.eu/documentations/qulity/collection), an enhanced Map class.
+* [DataStore](https://qdb.qbot.eu/documentations/qulity/datastore), an optimised dictionary.
 
 ## Links
 * [Website](https://qdb.qbot.eu/)
@@ -27,10 +28,30 @@ const Qulity = require("qulity");
 # Usage
 For QDB usage, check out [the Github](https://github.com/QSmally/QDB#README).
 
-### [Collection](https://qdb.qbot.eu/documentations/qulity/collection)
+## [Collection](https://qdb.qbot.eu/documentations/qulity/collection)
 An extended JavaScript Map with additional utility methods.
 ```js
 const Collection = new Qulity.Collection(Iterable?);
+```
+
+## [DataStore](https://qdb.qbot.eu/documentations/qulity/datastore)
+Base class that manages the creation, retrieval and deletion of a specific data model.
+```js
+const DataStore = new Qulity.DataStore(Iterable?);
+
+// Set a data model into the DataStore.
+DataStore.set("b0ce7d", {
+    Name: "Smally",
+    Job:  "Software Engineer"
+});
+
+// Resolve a data model to be used.
+const Model = DataStore.resolve("b0ce7d");
+
+// Last Recently Resolved model gets cached.
+// Or resolve a model and, if the cached model is
+// the one you requested, that gets returned.
+DataStore.LRR;
 ```
 
 # Issues, Contributing & License
