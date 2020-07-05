@@ -2,7 +2,7 @@
 # Qulity
 ## A data management utility
 
-**Qulity is still heavily under development.**
+**Qulity is, while stable, still heavily under development.** [Contribute](#issues,-contributing-&-license)
 
 > Qulity is a utility module which provides you enhanced versions of the native JavaScript Map & other classes with additional methods and optimisations.
 
@@ -14,7 +14,7 @@
 ## Links
 * [Website](https://qdb.qbot.eu/)
 * [Documentations](https://qdb.qbot.eu/documentations/qulity)
-* [Github](https://github.com/QSmally/Qulity) ([QDB](https://github.com/QSmally/QDB))
+* [Github](https://github.com/QSmally/Qulity)
 * [Discord Server](https://qdb.qbot.eu/discord)
 
 ## Install/Import
@@ -26,7 +26,6 @@ const Qulity = require("qulity");
 
 
 # Usage
-For QDB usage, check out [the Github](https://github.com/QSmally/QDB#README).
 
 ## [Collection](https://qdb.qbot.eu/documentations/qulity/collection)
 An extended JavaScript Map with additional utility methods.
