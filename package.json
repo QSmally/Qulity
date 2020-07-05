@@ -1,27 +1,23 @@
 {
   "name": "qulity",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A data management utility",
   "main": "Qulity.js",
-
   "scripts": {
-    "main":      "node -v && npm -v && node .",
-    "test":      "node Test/Main.js",
-    "debug":     "node Test/Main.js -d",
+    "main": "node -v && npm -v && node .",
+    "test": "node Test/Main.js",
+    "debug": "node Test/Main.js -d",
     "benchmark": "node Test/Benchmark.js"
   },
-
   "keywords": [
     "data",
     "management",
     "utility",
     "QDB"
   ],
-
-  "homepage":   "https://qdb.qbot.eu/",
+  "homepage": "https://qdb.qbot.eu/",
   "repository": "github:QSmally/Qulity",
-
-  "author":  "QSmally",
+  "author": "QSmally",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/QSmally/Qulity/issues"
