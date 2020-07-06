@@ -2,7 +2,7 @@
 # Qulity
 ## A data management utility
 
-**Qulity is, while stable, still heavily under development.** [Contribute](#issues,-contributing-&-license)
+**Qulity is, while stable, still heavily under development.**
 
 > Qulity is a utility module which provides you enhanced versions of the native JavaScript Map & other classes with additional methods and optimisations.
 
@@ -54,6 +54,6 @@ DataStore.LRR;
 ```
 
 # Issues, Contributing & License
-If you've found a bug or want to suggest a feature, please ensure that it hasn't already been reported/suggested - Then, feel free to create an issue! If you'd like to contribute to the project, feel free to fork [the repository](https://github.com/QSmally/Qulity) and create a pull request.
+If you've found a bug or want to suggest a feature, please ensure that it hasn't already been reported/suggested - Then, feel free to create an [issue](https://github.com/QSmally/Qulity/issues)! If you'd like to contribute to the project, feel free to fork [the repository](https://github.com/QSmally/Qulity) and create a pull request.
 
 This module is licensed under [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0).
