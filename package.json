@@ -4,7 +4,6 @@
   "description": "A data management utility",
   "main": "Qulity.js",
   "scripts": {
-    "main": "node -v && npm -v && node .",
     "test": "node Test/Main.js",
     "debug": "node Test/Main.js -d",
     "benchmark": "node Test/Benchmark.js"
