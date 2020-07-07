@@ -15,6 +15,7 @@
 module.exports = {
 
     Collection: require("./lib/Maps/Collection"),
-    DataStore:  require("./lib/Maps/DataStore")
+    DataStore:  require("./lib/Maps/DataStore"),
+    Manager:    require("./lib/Maps/Manager")
 
 };
