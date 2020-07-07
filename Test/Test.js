@@ -2,6 +2,7 @@
 module.exports = (Qulity, Tap) => {
 
     // Collection
+
     const Col = new Qulity.Collection({
         "foo": "bar",
         "roo": "doo",
@@ -74,6 +75,7 @@ module.exports = (Qulity, Tap) => {
 
 
     // DataStore
+
     const DS = new Qulity.DataStore([
         ["foo", {content: 1}],
         ["bar", {content: 2}],
@@ -99,5 +101,64 @@ module.exports = (Qulity, Tap) => {
 
     Tap("DataStore#resolve3", DS.resolve("foo"), undefined);
     Tap("DataStore#LRR5", DS.LRR, null);
+
+
+    // Manager
+
+    class Person {
+        constructor (n, a, m) {
+            this.name  = n;
+            this.age   = parseInt(a);
+            this.admin = m;
+        }
+    }
+
+    class UserManager extends Qulity.Manager {
+        constructor (...Options) {
+            super(...Options);
+        }
+
+        get admins () {
+            return this.Cache.filter(u => u.admin);
+        }
+
+        get cacheSize () {
+            return this.Cache.size;
+        }
+    }
+
+    var ref = new Person("foo", 20, false);
+
+    const UM = new UserManager({
+        "hd7883a": ref,
+        "a783hat": new Person("bar", 18, true),
+        "a7dyssd": new Person("roo", 22, false)
+    }, Person);
+
+    Tap("Manager#resolve1", typeof UM.resolve(new Person("doo", 27, false)) == "function", true);
+    Tap("Manager#add1", UM.add("b638clt", new Person("goo", 23, true)).Cache.size, 4);
+    Tap("Manager#cacheSize", UM.cacheSize, 4);
+    
+    Tap("Manager#resolve2", UM.resolve("hd7884a"), undefined);
+    Tap("Manager#resolve3", UM.resolve("hd7883a"), ref);
+
+    // Non-addressable
+
+    class NAUserManager extends Qulity.Manager {
+        constructor (Client, ...Options) {
+            super(...Options)
+            this.Client = Client;
+        }
+    }
+
+    const NUM = new NAUserManager({
+        name: "Smally"
+    });
+
+    Tap("Manager#add2", NUM.add("hd7883a", {name: "foo"}).Cache.size, 1);
+    Tap("Manager#add3", NUM.add("a783hat", {name: "bar"}).Cache.size, 2);
+    Tap("Manager#add4", NUM.add("a7dyssd", {name: "roo"}).Cache.size, 3);
+
+    Tap("Manager#resolve4", NUM.resolve(new Person("foo", 20, false)), null);
 
 }
