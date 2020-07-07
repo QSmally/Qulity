@@ -53,6 +53,35 @@ const Model = DataStore.resolve("b0ce7d");
 DataStore.LRR;
 ```
 
+## [Manager](https://qdb.qbot.eu/documentations/qulity/manager)
+Manages the API methods of data models and holds its cache.
+```js
+// Create an instance from a Manager.
+class UserManager extends Qulity.Manager {
+    constructor (Client, ...Options) {
+        super(...Options);
+        this.Client = Client;
+    }
+
+    get admins () { return this.Cache.filter(User => User.admin); }
+
+    ban (UserId)  {
+        const User = this.Cache.resolve(UserId);
+        if (User && !User.admin) User.ban();
+    }
+}
+
+const Users = new UserManager(Client, GuildUsers, User);
+Users.Client; // Access your own variables in the Manager.
+Users.Cache;  // All 'Users' as DataStore.
+
+// Automatically get the administrators from this Manager.
+const Admins = Users.admins;
+
+// Access methods within the Manager.
+Users.ban("d34hg3o");
+```
+
 # Issues, Contributing & License
 If you've found a bug or want to suggest a feature, please ensure that it hasn't already been reported/suggested - Then, feel free to create an [issue](https://github.com/QSmally/Qulity/issues)! If you'd like to contribute to the project, feel free to fork [the repository](https://github.com/QSmally/Qulity) and create a pull request.
 
