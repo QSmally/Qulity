@@ -104,7 +104,7 @@ module.exports = (Qulity, Tap) => {
 
 
     // Manager
-
+    
     class Person {
         constructor (n, a, m) {
             this.name  = n;
@@ -160,5 +160,11 @@ module.exports = (Qulity, Tap) => {
     Tap("Manager#add4", NUM.add("a7dyssd", {name: "roo"}).Cache.size, 3);
 
     Tap("Manager#resolve4", NUM.resolve(new Person("foo", 20, false)), null);
+
+    Tap("Manager#toObject", NUM.toObject(), {
+        hd7883a: {name: "foo"},
+        a783hat: {name: "bar"},
+        a7dyssd: {name: "roo"},
+    });
 
 }
