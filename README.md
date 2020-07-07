@@ -2,7 +2,7 @@
 # Qulity
 ## A data management utility
 
-**Qulity is, while stable, still heavily under development.**
+**Qulity is, while stable, still heavily under development.** [Contribute](#issues-contributing--license)
 
 > Qulity is a utility module which provides you enhanced versions of the native JavaScript Map & other classes with additional methods and optimisations.
 
@@ -10,6 +10,7 @@
 # Main Features
 * [Collection](https://qdb.qbot.eu/documentations/qulity/collection), an enhanced Map class.
 * [DataStore](https://qdb.qbot.eu/documentations/qulity/datastore), an optimised dictionary.
+* [Manager](https://qdb.qbot.eu/documentations/qulity/manager), integrated instance manager.
 
 ## Links
 * [Website](https://qdb.qbot.eu/)
