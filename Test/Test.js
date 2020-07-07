@@ -138,6 +138,8 @@ module.exports = (Qulity, Tap) => {
     Tap("Manager#resolve1", typeof UM.resolve(new Person("doo", 27, false)) == "function", true);
     Tap("Manager#add1", UM.add("b638clt", new Person("goo", 23, true)).Cache.size, 4);
     Tap("Manager#cacheSize", UM.cacheSize, 4);
+
+    Tap("Manager#admins", UM.admins.size, 2);
     
     Tap("Manager#resolve2", UM.resolve("hd7884a"), undefined);
     Tap("Manager#resolve3", UM.resolve("hd7883a"), ref);
