@@ -2,19 +2,19 @@
 # Qulity
 ## A data management utility
 
-**Qulity is, while stable, still heavily under development.** [Contribute](#issues-contributing--license)
+**Qulity is, while stable, still heavily under development.** [Contribute](#issues-contributing--license) [Documentation](https://github.com/QSmally/Qulity/blob/master/Documentation/Index.md)
 
 > Qulity is a utility module which provides you enhanced versions of the native JavaScript Map & other classes with additional methods and optimisations.
 
 
 # Main Features
-* [Collection](https://qdb.qbot.eu/documentations/qulity/collection), an enhanced Map class.
-* [DataStore](https://qdb.qbot.eu/documentations/qulity/datastore), an optimised dictionary.
-* [Manager](https://qdb.qbot.eu/documentations/qulity/manager), integrated instance manager.
+* [Collection](https://github.com/QSmally/Qulity/blob/master/Documentation/Collection.md), an enhanced Map class.
+* [DataStore](https://github.com/QSmally/Qulity/blob/master/Documentation/DataStore.md), an optimised dictionary.
+* [Manager](https://github.com/QSmally/Qulity/blob/master/Documentation/Manager.md), integrated instance manager.
 
 ## Links
-* [Website](https://qdb.qbot.eu/)
-* [Documentations](https://qdb.qbot.eu/documentations/qulity)
+* [Website](https://qdb.qbot.eu/) (Not updated for Qulity)
+* [Documentations](https://github.com/QSmally/Qulity/blob/master/Documentation/Index.md)
 * [Github](https://github.com/QSmally/Qulity)
 * [Discord Server](https://qdb.qbot.eu/discord)
 
@@ -28,13 +28,13 @@ const Qulity = require("qulity");
 
 # Usage
 
-## [Collection](https://qdb.qbot.eu/documentations/qulity/collection)
+## [Collection](https://github.com/QSmally/Qulity/blob/master/Documentation/Collection.md)
 An extended JavaScript Map with additional utility methods.
 ```js
 const Collection = new Qulity.Collection(Iterable?);
 ```
 
-## [DataStore](https://qdb.qbot.eu/documentations/qulity/datastore)
+## [DataStore](https://github.com/QSmally/Qulity/blob/master/Documentation/DataStore.md)
 Base class that manages the creation, retrieval and deletion of a specific data model.
 ```js
 const DataStore = new Qulity.DataStore(Iterable?);
@@ -54,7 +54,7 @@ const Model = DataStore.resolve("b0ce7d");
 DataStore.LRR;
 ```
 
-## [Manager](https://qdb.qbot.eu/documentations/qulity/manager)
+## [Manager](https://github.com/QSmally/Qulity/blob/master/Documentation/Manager.md)
 Manages the API methods of data models and holds its cache.
 ```js
 // Create an instance from a Manager.
