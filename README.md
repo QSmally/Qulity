@@ -64,21 +64,21 @@ class UserManager extends Qulity.Manager {
         this.Client = Client;
     }
 
-    get admins () { return this.Cache.filter(User => User.admin); }
+    get Admins () { return this.Cache.filter(User => User.Admin); }
 
-    ban (UserId)  {
+    Ban (UserId)  {
         const User = this.Cache.resolve(UserId);
-        if (User && !User.admin) User.ban();
+        if (User && !User.Admin) User.Ban(); // Custom from User instance.
     }
 }
 
 const Users = new UserManager(Client, GuildUsers, User);
 Users.Client; // Access your own variables in the Manager.
 Users.Cache;  // All 'Users' as DataStore.
-Users.admins; // Automatically get all administrators.
+Users.Admins; // Automatically get all administrators.
 
 // Access methods within the Manager.
-Users.ban("d34hg3o");
+Users.Ban("d34hg3o");
 ```
 
 # Issues, Contributing & License
