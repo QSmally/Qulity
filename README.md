@@ -2,7 +2,8 @@
 # Qulity
 ## A data management utility
 
-**Qulity is, while stable, still heavily under development.** There are loads more features to be added! [[Contribute](#issues-contributing--license)] [[Documentation](https://github.com/QSmally/Qulity/blob/master/Documentation/Index.md)]
+**Qulity is, while stable, still heavily under development.** [[Contribute](#issues-contributing--license)] [[Documentation](https://github.com/QSmally/Qulity/blob/master/Documentation/Index.md)]
+There are loads more features to be added or changed.
 
 > Qulity is a utility module which provides you enhanced versions of the native JavaScript Map & other classes with additional methods and optimisations.
 
@@ -57,7 +58,7 @@ DataStore.LRR;
 ## [Manager](https://github.com/QSmally/Qulity/blob/master/Documentation/Manager.md)
 Manages the API methods of data models and holds its cache.
 ```js
-// Create an instance from a Manager.
+// Create an instance from the Manager.
 class UserManager extends Qulity.Manager {
     constructor (Client, ...Options) {
         super(...Options);
