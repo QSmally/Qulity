@@ -2,7 +2,7 @@
 # Qulity
 ## A data management utility
 
-**Qulity is, while stable, still heavily under development.** [Contribute](#issues-contributing--license) [Documentation](https://github.com/QSmally/Qulity/blob/master/Documentation/Index.md)
+**Qulity is, while stable, still heavily under development.** There are loads more features to be added! [[Contribute](#issues-contributing--license)] [[Documentation](https://github.com/QSmally/Qulity/blob/master/Documentation/Index.md)]
 
 > Qulity is a utility module which provides you enhanced versions of the native JavaScript Map & other classes with additional methods and optimisations.
 
@@ -75,9 +75,7 @@ class UserManager extends Qulity.Manager {
 const Users = new UserManager(Client, GuildUsers, User);
 Users.Client; // Access your own variables in the Manager.
 Users.Cache;  // All 'Users' as DataStore.
-
-// Automatically get the administrators from this Manager.
-const Admins = Users.admins;
+Users.admins; // Automatically get all administrators.
 
 // Access methods within the Manager.
 Users.ban("d34hg3o");
