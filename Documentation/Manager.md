@@ -12,6 +12,6 @@ Manages the API methods of data models and holds its cache.
 class MyManager extends Qulity.Manager
 ```
 
-## Values
+# Values
 
-## Methods
+# Methods

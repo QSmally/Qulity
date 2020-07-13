@@ -12,6 +12,6 @@ Base class that manages the creation, retrieval and deletion of a specific data 
 const DataStore = new Qulity.DataStore(Iterable?);
 ```
 
-## Values
+# Values
 
-## Methods
+# Methods

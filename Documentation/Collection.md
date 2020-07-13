@@ -12,6 +12,6 @@ An extended JavaScript Map with additional utility methods.
 const Collection = new Qulity.Collection(Iterable?);
 ```
 
-## Values
+# Values
 
-## Methods
+# Methods
