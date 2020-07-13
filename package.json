@@ -4,9 +4,10 @@
   "description": "A data management utility",
   "main": "Qulity.js",
   "scripts": {
-    "test": "node Test/Main.js",
-    "debug": "node Test/Main.js -d",
-    "benchmark": "node Test/Benchmark.js"
+    "test": "node Development/Test/Main.js",
+    "debug": "node Development/Test/Main.js -d",
+    "docs": "node Development/Gen/Main.js",
+    "benchmark": "node Development/Test/Benchmark.js"
   },
   "keywords": [
     "data",

@@ -1,5 +1,5 @@
 
-const Qulity = require("../Qulity");
+const Qulity = require("../../Qulity");
 const Col    = new Qulity.Collection();
 
 Col.set("foo", "bar");
