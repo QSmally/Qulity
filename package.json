@@ -12,6 +12,7 @@
     "data",
     "management",
     "utility",
+    "backend",
     "QDB"
   ],
   "homepage": "https://qdb.qbot.eu/",
