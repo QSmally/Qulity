@@ -1,0 +1,4 @@
+
+/*
+    Generates Qulity documentation
+*/
