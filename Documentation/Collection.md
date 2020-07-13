@@ -1,7 +1,6 @@
 
 # Collection
 
-#### Index
 * [Start](https://github.com/QSmally/Qulity/blob/master/Documentation/Index.md)
 * [Collection](https://github.com/QSmally/Qulity/blob/master/Documentation/Collection.md)
 * [DataStore](https://github.com/QSmally/Qulity/blob/master/Documentation/DataStore.md)
