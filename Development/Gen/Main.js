@@ -14,4 +14,5 @@ FS.readdirSync("./lib/").forEach(Section => {
 });
 
 const Keys = Object.keys(require("../../Qulity"));
-Files = Files.filter(File => Keys.includes(Path.basename(File, ".js")));
+Files.filter(File => Keys.includes(Path.basename(File, ".js")))
+.forEach(Context => require("./Parse")(Context));
