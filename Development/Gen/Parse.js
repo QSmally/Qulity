@@ -51,7 +51,7 @@ module.exports = File => {
                     break;
 
                 case "@example":
-                    Output.Code = Line;
+                    Output.Code = Contents;
                     break;
 
                 default:
