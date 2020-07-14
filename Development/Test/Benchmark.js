@@ -1,12 +1,15 @@
 
 const Qulity = require("../../Qulity");
-const Col    = new Qulity.Collection();
+const DS = new Qulity.DataStore();
 
-Col.set("foo", "bar");
-Col.set("roo", "doo");
-Col.set("dee", "wee");
+DS.set("foo", {content: "bar"});
+DS.set("bar", {content: "roo"});
+DS.set("roo", {content: "foo"});
 
-console.log(Col);
+console.time("Uncached");
+DS.resolve("foo");
+console.timeEnd("Uncached");
 
-const NewCol = Col.clone();
-console.log(NewCol);
+console.time("Cached");
+DS.resolve("foo");
+console.timeEnd("Cached");
