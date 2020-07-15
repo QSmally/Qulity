@@ -13,13 +13,13 @@ const MyDS = new Qulity.DataStore(Iterable?);
 ```
 
 # Values
-> ## LRR [Read Only]
+## LRR [Read Only]
 > Last Recently Resolved - Caches the last data model that got resolved.
 >
 > Type **{DataModel}**
 
 # Methods
-> ## set(Key, Model)
+## set(Key, Model)
 > Sets a model into the DataStore.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -28,7 +28,7 @@ const MyDS = new Qulity.DataStore(Iterable?);
 >
 > Returns **{DataStore}** The updated DataStore.
 
-> ## delete(Key)
+## delete(Key)
 > Deletes a model from the DataStore.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -36,7 +36,7 @@ const MyDS = new Qulity.DataStore(Iterable?);
 >
 > Returns **{DataStore}** The updated DataStore.
 
-> ## resolve(Key)
+## resolve(Key)
 > Resolves a data model.
 > | Key | Type | Description |
 > | --- | --- | --- |
