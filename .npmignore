@@ -8,6 +8,7 @@ Documentation/
 .git/
 .DS_Store
 .gitignore
+*.zip
 
 # Packages
 node_modules/
