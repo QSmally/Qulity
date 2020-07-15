@@ -11,7 +11,7 @@ function FormatEntry (Ctx, Method) {
     ]);
 
     return [
-        `> ## ${Ctx.Value}${Method ? `(${Params.map(Par => Par[1]).join(", ")})` : ""}${(Ctx.Flags || []).includes("readonly") ? " [Read Only]" : ""}`,
+        `## ${Ctx.Value}${Method ? `(${Params.map(Par => Par[1]).join(", ")})` : ""}${(Ctx.Flags || []).includes("readonly") ? " [Read Only]" : ""}`,
         `> ${Ctx.Description}` + (Ctx.Params ? `\n> | Key | Type | Description |\n> | --- | --- | --- |\n${Params.map(Par => `> | ${Par[1]} | ${Par[0].replace(/\*/g, "Any").replace(/\|/g, ", ")} | ${Par[2]} |`).join("\n")}` : ""),
         `>\n> ${Ctx.Type ? `Type **${Ctx.Type}**` : Ctx.Returns ? `Returns **${Ctx.Returns.split(" ")[0].replace(/\*/g, "Any")}** ${Ctx.Returns.split(" ").slice(1).join(" ")}` : "Returns **{Null}**"}`
     ].join("\n");
