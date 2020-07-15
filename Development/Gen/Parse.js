@@ -40,7 +40,9 @@ module.exports = File => {
                     break;
 
                 case "@extends":
-                    Output.Extends = Contents;
+                case "@type":
+                    const Type = Line.split(" ")[0].slice(1);
+                    Output[Type[0].toUpperCase() + Type.slice(1)] = Contents;
                     break;
 
                 case "@readonly":
@@ -48,6 +50,7 @@ module.exports = File => {
                 case "@name":
                     if (!Output.Flags) Output.Flags = [];
                     Output.Flags.push(Line.split(" ")[0].slice(1));
+                    if (Line.split(" ")[0] == "@name") Output.Value = Contents.split("#")[1];
                     break;
 
                 case "@example":
