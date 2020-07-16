@@ -14,7 +14,7 @@ const MyDS = new Qulity.DataStore(Iterable?);
 
 # Values
 ## [.LRR](https://github.com/QSmally/Qulity/blob/master/lib/Maps/DataStore.js#L18)
-> Last Recently Resolved - Caches the last data model that got resolved. ### [**Read Only**]
+> Last Recently Resolved - Caches the last data model that got resolved. [**Read Only**]
 >
 > Type **{DataModel}**
 

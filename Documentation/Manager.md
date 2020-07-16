@@ -13,7 +13,7 @@ class MyManager extends Qulity.Manager
 
 # Values
 ## [.Cache](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Manager.js#L16)
-> Cached dataset instances of this Manager. ### [**Read Only**]
+> Cached dataset instances of this Manager. [**Read Only**]
 >
 > Type **{DataStore}**
 
