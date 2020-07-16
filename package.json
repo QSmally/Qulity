@@ -1,6 +1,6 @@
 {
   "name": "qulity",
-  "version": "1.0.0-pre",
+  "version": "1.0.0",
   "description": "A data management utility",
   "main": "Qulity.js",
   "scripts": {
