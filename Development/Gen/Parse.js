@@ -11,7 +11,10 @@ module.exports = File => {
         const fIdx = Buffer.indexOf("/**");
         const sIdx = Buffer.indexOf("*/");
 
-        Comments.push(Buffer.slice(fIdx, sIdx + 2));
+        const Comment = Buffer.slice(fIdx, sIdx + 2);
+        Comment.push(fIdx.toString());
+
+        Comments.push(Comment);
         Buffer[fIdx] = Buffer[sIdx] = "Mapped";
     }
 
@@ -21,9 +24,11 @@ module.exports = File => {
         .map(Line => Line.replace("* ", ""));
     }).map(Tree => {
 
+        const Line  = parseInt(Tree.pop()) + 1;
         const Value = Tree.splice(Tree.length - 1, 1)[0].split(" ");
-        let Output  = {Value: Value[Value[0] == "async" ? 1 : 0]};
-        let CtxTag  = "Description";
+        let Output  = {Value: Value[Value[0] == "async" ? 1 : 0], Line};
+
+        let CtxTag = "Description";
 
         Tree.forEach(Line => {
             const Contents = Line.split(" ").slice(1).join(" ");
