@@ -14,7 +14,7 @@ function FormatEntry (Ctx, Module, Method) {
 
     return [
         `## [.${Ctx.Value}${Method ? `(${Params.map(Par => Par[1]).join(", ")})` : ""}](${Source})`,
-        `> ${Ctx.Description}${(Ctx.Flags || []).includes("readonly") ? " ### [**Read Only**]" : ""}` + (Ctx.Params ? `\n> | Key | Type | Description |\n> | --- | --- | --- |\n${Params.map(Par => `> | ${Par[1]} | ${Par[0].replace(/\*/g, "Any").replace(/\|/g, ", ")} | ${Par[2]} |`).join("\n")}` : ""),
+        `> ${Ctx.Description}${(Ctx.Flags || []).includes("readonly") ? " [**Read Only**]" : ""}` + (Ctx.Params ? `\n> | Key | Type | Description |\n> | --- | --- | --- |\n${Params.map(Par => `> | ${Par[1]} | ${Par[0].replace(/\*/g, "Any").replace(/\|/g, ", ")} | ${Par[2]} |`).join("\n")}` : ""),
         `>\n> ${Ctx.Type ? `Type **${Ctx.Type}**` : Ctx.Returns ? `Returns **${Ctx.Returns.split(" ")[0].replace(/\*/g, "Any")}** ${Ctx.Returns.split(" ").slice(1).join(" ")}` : "Returns **{Null}**"}`
     ].join("\n");
 }
