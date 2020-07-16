@@ -13,13 +13,13 @@ const MyDS = new Qulity.DataStore(Iterable?);
 ```
 
 # Values
-## LRR [Read Only]
-> Last Recently Resolved - Caches the last data model that got resolved.
+## [.LRR](https://github.com/QSmally/Qulity/blob/master/lib/Maps/DataStore.js#L18)
+> Last Recently Resolved - Caches the last data model that got resolved. ### [**Read Only**]
 >
 > Type **{DataModel}**
 
 # Methods
-## set(Key, Model)
+## [.set(Key, Model)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/DataStore.js#L39)
 > Sets a model into the DataStore.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -28,7 +28,7 @@ const MyDS = new Qulity.DataStore(Iterable?);
 >
 > Returns **{DataStore}** The updated DataStore.
 
-## delete(Key)
+## [.delete(Key)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/DataStore.js#L54)
 > Deletes a model from the DataStore.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -36,7 +36,7 @@ const MyDS = new Qulity.DataStore(Iterable?);
 >
 > Returns **{DataStore}** The updated DataStore.
 
-## resolve(Key)
+## [.resolve(Key)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/DataStore.js#L65)
 > Resolves a data model.
 > | Key | Type | Description |
 > | --- | --- | --- |

@@ -12,13 +12,13 @@ class MyManager extends Qulity.Manager
 ```
 
 # Values
-## Cache [Read Only]
-> Cached dataset instances of this Manager.
+## [.Cache](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Manager.js#L16)
+> Cached dataset instances of this Manager. ### [**Read Only**]
 >
 > Type **{DataStore}**
 
 # Methods
-## add(Id, Model)
+## [.add(Id, Model)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Manager.js#L43)
 > Inserts an instance into this Manager's cache.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -27,7 +27,7 @@ class MyManager extends Qulity.Manager
 >
 > Returns **{BaseManager}** The updated Manager.
 
-## remove(Id)
+## [.remove(Id)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Manager.js#L58)
 > Removes an instance from this Manager's cache.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -35,12 +35,12 @@ class MyManager extends Qulity.Manager
 >
 > Returns **{Manager}** The updated Manager.
 
-## toObject()
+## [.toObject()](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Manager.js#L71)
 > Serialises this Manager's cache into an object, while still preserving its original data.
 >
 > Returns **{Object}** The object-form of this Manager's data cache.
 
-## resolve(IdOrInstance)
+## [.resolve(IdOrInstance)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Manager.js#L82)
 > Resolves an instance of this Manager.
 > | Key | Type | Description |
 > | --- | --- | --- |
