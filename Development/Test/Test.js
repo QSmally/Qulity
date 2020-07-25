@@ -191,4 +191,19 @@ module.exports = (Qulity, Tap) => {
     Tap("Queue#next", Q.next(), {name: "foo"});
     Tap("Queue#size2", Q.size, 3);
 
+    Tap("Queue#iterate", Q.iterate((Val, IdxDS, Idx) => {
+        const User = IdxDS.resolve(Val.name);
+        User["name"] = Val.name + "!";
+        User["idx"] = Idx;
+        IdxDS.set(User);
+    }, {
+        goo: {age: 19},
+        roo: {age: 23},
+        doo: {age: 15}
+    }).toObject(), {
+        goo: {age: 19, _DataStore: "goo", name: "goo!", idx: 2},
+        roo: {age: 23, _DataStore: "roo", name: "roo!", idx: 0},
+        doo: {age: 15, _DataStore: "doo", name: "doo!", idx: 1}
+    });
+
 }
