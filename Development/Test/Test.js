@@ -188,7 +188,7 @@ module.exports = (Qulity, Tap) => {
 
     Tap("Queue#add2", Q.add({name: "goo"}), 4);
 
-    Tap("Queue#next", Q.next(), {name: "doo"});
+    Tap("Queue#next1", Q.next(), {name: "doo"});
     Tap("Queue#size2", Q.size, 3);
 
     Tap("Queue#iterate", Q.iterate((Val, IdxDS, Idx) => {
@@ -207,5 +207,31 @@ module.exports = (Qulity, Tap) => {
     });
 
     Tap("Queue#size3", Q.size, 0);
+
+    Tap("Queue#add3", Q.add({name: "foo"}, true), 1);
+    Tap("Queue#add4", Q.add({name: "bar"}, true), 2);
+    Tap("Queue#add5", Q.add({name: "roo"}, true), 3);
+
+    Tap("Queue#size4", Q.size, 3);
+
+    Tap("Queue#remove4", Q.remove((Val, Idx) => {
+        return typeof Val == "function";
+    }), 3);
+
+    Tap("Queue#size5", Q.size, 3);
+
+    Tap("Queue#remove5", Q.remove((Val, Idx) => {
+        return Val["name"].includes("o");
+    }), 2);
+
+    Tap("Queue#size6", Q.size, 2);
+
+    Tap("Queue#remove6", Q.remove((Val, Idx) => {
+        return Idx === 0;
+    }), 1);
+
+    Tap("Queue#size7", Q.size, 1);
+    Tap("Queue#next2", Q.next(), {name: "foo"});
+    Tap("Queue#size8", Q.size, 0);
 
 }
