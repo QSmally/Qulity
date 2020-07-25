@@ -13,6 +13,9 @@ There are loads more features to be added or changed.
 * [DataStore](https://github.com/QSmally/Qulity/blob/master/Documentation/DataStore.md), an optimised dictionary.
 * [Manager](https://github.com/QSmally/Qulity/blob/master/Documentation/Manager.md), integrated instance manager.
 
+### Other Features
+* [Queue](https://github.com/QSmally/Qulity/blob/master/Documentation/Queue.md), an element ordening integration.
+
 ## Links
 * [Website](https://qdb.qbot.eu/) (Not updated for Qulity)
 * [Documentations](https://github.com/QSmally/Qulity/blob/master/Documentation/Index.md)
@@ -80,6 +83,20 @@ Users.Admins; // Automatically get all administrators.
 
 // Access methods within the Manager.
 Users.Ban("d34hg3o");
+```
+
+## [Queue](https://github.com/QSmally/Qulity/blob/master/Documentation/Queue.md)
+A manager for ordening values and iterating over them.
+```js
+const Queue = new QDB.Queue(Shards);
+
+// Iterate over the Queue items.
+Shards = Queue.iterate(async (Shard, Cache) => {
+    const {Token} = Cache.resolve(Shard.Id);
+    // Log into the shard and caches it.
+    await Shard.Login(Token);
+    Cache.set(Shard.Id, Shard);
+}, BaseCache);
 ```
 
 # Issues, Contributing & License
