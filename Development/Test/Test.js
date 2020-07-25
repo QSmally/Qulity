@@ -180,7 +180,7 @@ module.exports = (Qulity, Tap) => {
 
     Tap("Queue#length", Q.Values.length, 3);
     Tap("Queue#size1", Q.size, 3);
-    Tap("Queue#add1", Q.add({name: "doo"}), 4);
+    Tap("Queue#add1", Q.add({name: "doo"}, true), 4);
 
     Tap("Queue#remove1", Q.remove(1), 3);
     Tap("Queue#remove2", Q.remove(5), 3);
@@ -188,7 +188,7 @@ module.exports = (Qulity, Tap) => {
 
     Tap("Queue#add2", Q.add({name: "goo"}), 4);
 
-    Tap("Queue#next", Q.next(), {name: "foo"});
+    Tap("Queue#next1", Q.next(), {name: "doo"});
     Tap("Queue#size2", Q.size, 3);
 
     Tap("Queue#iterate", Q.iterate((Val, IdxDS, Idx) => {
@@ -197,15 +197,41 @@ module.exports = (Qulity, Tap) => {
         User["idx"] = Idx;
         IdxDS.set(User);
     }, {
+        bar: {age: 15},
         goo: {age: 19},
-        roo: {age: 23},
-        doo: {age: 15}
+        roo: {age: 23}
     }).toObject(), {
+        bar: {age: 15, _DataStore: "bar", name: "bar!", idx: 0},
         goo: {age: 19, _DataStore: "goo", name: "goo!", idx: 2},
-        roo: {age: 23, _DataStore: "roo", name: "roo!", idx: 0},
-        doo: {age: 15, _DataStore: "doo", name: "doo!", idx: 1}
+        roo: {age: 23, _DataStore: "roo", name: "roo!", idx: 1}
     });
 
     Tap("Queue#size3", Q.size, 0);
+
+    Tap("Queue#add3", Q.add({name: "foo"}, true), 1);
+    Tap("Queue#add4", Q.add({name: "bar"}, true), 2);
+    Tap("Queue#add5", Q.add({name: "roo"}, true), 3);
+
+    Tap("Queue#size4", Q.size, 3);
+
+    Tap("Queue#remove4", Q.remove((Val, Idx) => {
+        return typeof Val == "function";
+    }), 3);
+
+    Tap("Queue#size5", Q.size, 3);
+
+    Tap("Queue#remove5", Q.remove((Val, Idx) => {
+        return Val["name"].includes("o");
+    }), 2);
+
+    Tap("Queue#size6", Q.size, 2);
+
+    Tap("Queue#remove6", Q.remove((Val, Idx) => {
+        return Idx === 0;
+    }), 1);
+
+    Tap("Queue#size7", Q.size, 1);
+    Tap("Queue#next2", Q.next(), {name: "foo"});
+    Tap("Queue#size8", Q.size, 0);
 
 }
