@@ -6,6 +6,7 @@
 * [Collection](https://github.com/QSmally/Qulity/blob/master/Documentation/Collection.md)
 * [DataStore](https://github.com/QSmally/Qulity/blob/master/Documentation/DataStore.md)
 * [Manager](https://github.com/QSmally/Qulity/blob/master/Documentation/Manager.md)
+* [Queue](https://github.com/QSmally/Qulity/blob/master/Documentation/Queue.md)
 
 Base class that manages the creation, retrieval and deletion of a specific data model.
 ```js
