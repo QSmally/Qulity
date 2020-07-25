@@ -13,8 +13,12 @@ FS.readdirSync("./lib/").forEach(Section => {
     else Files.push(`./lib/${Section}`);
 });
 
+
+const FileNames = Files.map(File => Path.basename(File, ".js"));
 const Keys = Object.keys(require("../../Qulity"));
-Files.filter(File => Keys.includes(Path.basename(File, ".js")))
+
+Keys.filter(Key => FileNames.includes(Key))
+.map(Module => Files[FileNames.indexOf(Module)])
 .forEach((Context, _i, Files) => {
     const Parsed = require("./Parse")(Context);
     if (Parsed.length) require("./Format")(Files.map(File => Path.basename(File, ".js")), Context, Parsed);
