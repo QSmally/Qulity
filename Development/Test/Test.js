@@ -206,4 +206,6 @@ module.exports = (Qulity, Tap) => {
         doo: {age: 15, _DataStore: "doo", name: "doo!", idx: 1}
     });
 
+    Tap("Queue#size3", Q.size, 0);
+
 }
