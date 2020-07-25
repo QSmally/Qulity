@@ -180,7 +180,7 @@ module.exports = (Qulity, Tap) => {
 
     Tap("Queue#length", Q.Values.length, 3);
     Tap("Queue#size1", Q.size, 3);
-    Tap("Queue#add1", Q.add({name: "doo"}), 4);
+    Tap("Queue#add1", Q.add({name: "doo"}, true), 4);
 
     Tap("Queue#remove1", Q.remove(1), 3);
     Tap("Queue#remove2", Q.remove(5), 3);
@@ -188,7 +188,7 @@ module.exports = (Qulity, Tap) => {
 
     Tap("Queue#add2", Q.add({name: "goo"}), 4);
 
-    Tap("Queue#next", Q.next(), {name: "foo"});
+    Tap("Queue#next", Q.next(), {name: "doo"});
     Tap("Queue#size2", Q.size, 3);
 
     Tap("Queue#iterate", Q.iterate((Val, IdxDS, Idx) => {
@@ -197,13 +197,13 @@ module.exports = (Qulity, Tap) => {
         User["idx"] = Idx;
         IdxDS.set(User);
     }, {
+        bar: {age: 15},
         goo: {age: 19},
-        roo: {age: 23},
-        doo: {age: 15}
+        roo: {age: 23}
     }).toObject(), {
+        bar: {age: 15, _DataStore: "bar", name: "bar!", idx: 0},
         goo: {age: 19, _DataStore: "goo", name: "goo!", idx: 2},
-        roo: {age: 23, _DataStore: "roo", name: "roo!", idx: 0},
-        doo: {age: 15, _DataStore: "doo", name: "doo!", idx: 1}
+        roo: {age: 23, _DataStore: "roo", name: "roo!", idx: 1}
     });
 
     Tap("Queue#size3", Q.size, 0);
