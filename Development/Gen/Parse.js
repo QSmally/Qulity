@@ -26,7 +26,7 @@ module.exports = File => {
 
         const Line  = parseInt(Tree.pop()) + 1;
         const Value = Tree.splice(Tree.length - 1, 1)[0].split(" ");
-        let Output  = {Value: Value[Value[0] == "async" ? 1 : 0], Line};
+        let Output  = {Value: Value[Value[0] == "async" ? 1 : 0], Line, Flags: []};
 
         let CtxTag = "Description";
 
@@ -53,7 +53,6 @@ module.exports = File => {
                 case "@readonly":
                 case "@private":
                 case "@name":
-                    if (!Output.Flags) Output.Flags = [];
                     Output.Flags.push(Line.split(" ")[0].slice(1));
                     if (Line.split(" ")[0] == "@name") Output.Value = Contents.split("#")[1];
                     break;
@@ -69,11 +68,9 @@ module.exports = File => {
             }
         });
 
-        if (Value[0] == "async") {
-            if (!Output.Flags) Output.Flags = [];
-            Output.Flags.push("async");
-        }
-        
+        if (Value[0] == "async")
+        Output.Flags.push("async");
+
         return Output;
 
     });
