@@ -2,8 +2,7 @@
 # Qulity
 ## A data management utility
 
-**Qulity is, while stable, still heavily under development.** [[Contribute](#issues-contributing--license)] [[Documentation](https://github.com/QSmally/Qulity/blob/master/Documentation/Index.md)]
-There are loads more features to be added or changed.
+**Qulity is stable and ready for production use, but it's still under development.** [[Contribute](#issues-contributing--license)] [[Documentation](https://github.com/QSmally/Qulity/blob/master/Documentation/Index.md)]
 
 > Qulity is a utility module which provides you enhanced versions of the native JavaScript Map & other classes with additional methods and optimisations.
 
