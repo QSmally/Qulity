@@ -169,4 +169,26 @@ module.exports = (Qulity, Tap) => {
         a7dyssd: {name: "roo"},
     });
 
+
+    // Queue
+
+    const Q = new Qulity.Queue([
+        {name: "foo"},
+        {name: "bar"},
+        {name: "roo"}
+    ]);
+
+    Tap("Queue#length", Q.Values.length, 3);
+    Tap("Queue#size1", Q.size, 3);
+    Tap("Queue#add1", Q.add({name: "doo"}), 4);
+
+    Tap("Queue#remove1", Q.remove(1), 3);
+    Tap("Queue#remove2", Q.remove(5), 3);
+    Tap("Queue#remove3", Q.remove(-5), 3);
+
+    Tap("Queue#add2", Q.add({name: "goo"}), 4);
+
+    Tap("Queue#next", Q.next(), {name: "foo"});
+    Tap("Queue#size2", Q.size, 3);
+
 }
