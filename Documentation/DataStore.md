@@ -13,6 +13,12 @@ Base class that manages the creation, retrieval and deletion of a specific data 
 const MyDS = new Qulity.DataStore(Iterable?);
 ```
 
+> | Key | Type | Description |
+> | --- | --- | --- |
+> | Iterable? | Array, Object | Optional initial values of this DataStore. |
+
+
+
 # Values
 ## [.LRR](https://github.com/QSmally/Qulity/blob/master/lib/Maps/DataStore.js#L18)
 > Last Recently Resolved - Caches the last data model that got resolved. [**Read Only**]

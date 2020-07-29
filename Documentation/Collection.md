@@ -13,6 +13,12 @@ An extended JavaScript Map with additional utility methods.
 const Coll = new Qulity.Collection(Iterable?);
 ```
 
+> | Key | Type | Description |
+> | --- | --- | --- |
+> | Iterable? | Array, Object | Optional initial values of this Collection. |
+
+
+
 # Methods
 ## [.set(Key, Val)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L25)
 > Main interaction point of this Collection.

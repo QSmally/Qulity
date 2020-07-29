@@ -12,6 +12,12 @@ A manager for ordening values and iterating over them.
 const Queue = new Qulity.Queue(Iterable?);
 ```
 
+> | Key | Type | Description |
+> | --- | --- | --- |
+> | Iterable? | Array | Initial values of this Queue. |
+
+
+
 # Values
 ## [.Values](https://github.com/QSmally/Qulity/blob/master/lib/Integrations/Queue.js#L15)
 > Main structure holding the Queue values. [**Read Only**]
