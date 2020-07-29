@@ -11,12 +11,9 @@
 * [Collection](https://github.com/QSmally/Qulity/blob/master/Documentation/Collection.md), an enhanced Map class.
 * [DataStore](https://github.com/QSmally/Qulity/blob/master/Documentation/DataStore.md), an optimised dictionary.
 * [Manager](https://github.com/QSmally/Qulity/blob/master/Documentation/Manager.md), integrated instance manager.
-
-### Other Features
 * [Queue](https://github.com/QSmally/Qulity/blob/master/Documentation/Queue.md), an element ordening integration.
 
 ## Links
-* [Website](https://qdb.qbot.eu/) (Not updated for Qulity)
 * [Documentations](https://github.com/QSmally/Qulity/blob/master/Documentation/Index.md)
 * [Github](https://github.com/QSmally/Qulity)
 * [Discord Server](https://qdb.qbot.eu/discord)
