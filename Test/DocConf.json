@@ -1,0 +1,14 @@
+{
+    "Source": "lib/",
+    "Out":    "Documentation/",
+    "Index":  true,
+
+    "Additional": {
+
+    },
+
+    "Repository": "https://github.com/QSmally/Qulity/blob/master/",
+
+    "Keys": "Qulity.js",
+    "Typedefs": []
+}
