@@ -4,10 +4,10 @@
   "description": "A data management utility",
   "main": "Qulity.js",
   "scripts": {
-    "test": "node Development/Test/Main.js",
-    "debug": "node Development/Test/Main.js -d",
-    "docs": "node Development/Gen/Main.js",
-    "benchmark": "node Development/Test/Benchmark.js"
+    "test": "node Test/Main.js",
+    "debug": "node Test/Main.js -d",
+    "benchmark": "node Test/Benchmark.js",
+    "docs": "gendocs Test/DocConf.json"
   },
   "keywords": [
     "data",
@@ -22,5 +22,8 @@
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/QSmally/Qulity/issues"
+  },
+  "devDependencies": {
+    "docgen": "github:QSmally/Docgen"
   }
 }
