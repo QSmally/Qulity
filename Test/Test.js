@@ -102,6 +102,11 @@ module.exports = (Qulity, Tap) => {
     Tap("DataStore#resolve3", DS.resolve("foo"), undefined);
     Tap("DataStore#LRR5", DS.LRR, null);
 
+    Tap("DataStore#resolve4", DS.resolve("doo"), {content: 4, _DataStore: "doo"});
+    Tap("DataStore#LRR6", DS.LRR, {content: 4, _DataStore: "doo"});
+    Tap("DataStore#clear", DS.clear().size, 0);
+    Tap("DataStore#LRR7", DS.LRR, null);
+
 
     // Manager
     
