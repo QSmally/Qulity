@@ -13,9 +13,9 @@ Base class that manages the creation, retrieval and deletion of a specific data 
 const MyDS = new Qulity.DataStore(Iterable?);
 ```
 
-> | Key | Type | Description |
-> | --- | --- | --- |
-> | Iterable? | Array, Object | Optional initial values of this DataStore. |
+| Key | Type | Description |
+| --- | --- | --- |
+| Iterable? | Array, Object | Optional initial values of this DataStore. |
 
 
 

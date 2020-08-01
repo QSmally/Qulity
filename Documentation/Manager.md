@@ -12,10 +12,10 @@ Manages the API methods of data models and holds its cache.
 class MyManager extends Qulity.Manager
 ```
 
-> | Key | Type | Description |
-> | --- | --- | --- |
-> | Iterable? | Array, Object | Optional initial values of this Manager. |
-> | Holds? | Function | An optional structure belonging to this Manager. |
+| Key | Type | Description |
+| --- | --- | --- |
+| Iterable? | Array, Object | Optional initial values of this Manager. |
+| Holds? | Function | An optional structure belonging to this Manager. |
 
 
 

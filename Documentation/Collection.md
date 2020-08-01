@@ -13,9 +13,9 @@ An extended JavaScript Map with additional utility methods.
 const Coll = new Qulity.Collection(Iterable?);
 ```
 
-> | Key | Type | Description |
-> | --- | --- | --- |
-> | Iterable? | Array, Object | Optional initial values of this Collection. |
+| Key | Type | Description |
+| --- | --- | --- |
+| Iterable? | Array, Object | Optional initial values of this Collection. |
 
 
 

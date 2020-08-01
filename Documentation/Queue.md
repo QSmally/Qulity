@@ -12,9 +12,9 @@ A manager for ordening values and iterating over them.
 const Queue = new Qulity.Queue(Iterable?);
 ```
 
-> | Key | Type | Description |
-> | --- | --- | --- |
-> | Iterable? | Array | Initial values of this Queue. |
+| Key | Type | Description |
+| --- | --- | --- |
+| Iterable? | Array | Initial values of this Queue. |
 
 
 
