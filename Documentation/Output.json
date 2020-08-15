@@ -1,0 +1,418 @@
+{
+    "Collection": [
+        {
+            "Value": "set",
+            "Flags": [],
+            "Line": 25,
+            "Description": "Main interaction point of this Collection.",
+            "Params": [
+                "{*} Key",
+                "{*} Val"
+            ],
+            "Returns": "{Collection}"
+        },
+        {
+            "Value": "get",
+            "Flags": [],
+            "Line": 36,
+            "Description": "Main interaction point of this Collection.",
+            "Params": [
+                "{*} Key",
+                "{*} Val"
+            ],
+            "Returns": "{*} Element if found."
+        },
+        {
+            "Value": "delete",
+            "Flags": [],
+            "Line": 46,
+            "Description": "Main interaction point of this Collection.",
+            "Params": [
+                "{*} Key"
+            ],
+            "Returns": "{Collection}"
+        },
+        {
+            "Value": "toArray",
+            "Flags": [],
+            "Line": 57,
+            "Description": "Creates an ordered array of the values of this Collection.",
+            "Returns": "{Array} Array of values in this Collection."
+        },
+        {
+            "Value": "toKeyArray",
+            "Flags": [],
+            "Line": 65,
+            "Description": "Creates an ordered array of the keys of this Collection.",
+            "Returns": "{Array} Array of keys in this Collection."
+        },
+        {
+            "Value": "toObject",
+            "Flags": [],
+            "Line": 73,
+            "Description": "Creates an ordered object of all the entries of this Collection.",
+            "Returns": "{Object} Object of all key/value pairs of this Collection."
+        },
+        {
+            "Value": "first",
+            "Flags": [],
+            "Line": 83,
+            "Description": "Obtains the first value(s) from this Collection. Starting from the end if a negative amount is provided.",
+            "Params": [
+                "{Number} [Amount] Amount of values to obtain from the beginning."
+            ],
+            "Returns": "{*|Array} A single value, or an array of values if there's an amount provided."
+        },
+        {
+            "Value": "last",
+            "Flags": [],
+            "Line": 102,
+            "Description": "Obtains the last value(s) from this Collection. Starting from the beginning if a negative amount is provided.",
+            "Params": [
+                "{Number} [Amount] Amount of values to obtain from the end."
+            ],
+            "Returns": "{*|Array} A single value, or an array of values if there's an amount provided."
+        },
+        {
+            "Value": "random",
+            "Flags": [],
+            "Line": 119,
+            "Description": "Obtains unique random value(s) from this Collection.",
+            "Params": [
+                "{Number} [Amount] Amount of values to obtain randomly."
+            ],
+            "Returns": "{*|Array} A single value, or an array of values if there's an amount provided."
+        },
+        {
+            "Value": "find",
+            "Flags": [],
+            "Line": 139,
+            "Description": "Searches for a single item where the given function returns a truthy value. This behaves like [Array.find()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find).",
+            "Params": [
+                "{Function} cfn Function used to test with.",
+                "{*} [thisv] Value to use as `this` when executing functions."
+            ],
+            "Returns": "{*} Returns the value of the element found."
+        },
+        {
+            "Value": "sweep",
+            "Flags": [],
+            "Line": 156,
+            "Description": "Removes entries that satisfy the provided filter function.",
+            "Params": [
+                "{Function} cfn Function used to test with.",
+                "{*} [thisv] Value to use as `this` when executing functions."
+            ],
+            "Returns": "{Number} Number of removed entries."
+        },
+        {
+            "Value": "filter",
+            "Flags": [],
+            "Line": 173,
+            "Description": "Identical to `Array.filter()`, but returns a Collection instead of an array.",
+            "Params": [
+                "{Function} cfn Function used to test with.",
+                "{*} [thisv] Value to use as `this` when executing functions."
+            ],
+            "Returns": "{Collection} Returns the new filtered Collection."
+        },
+        {
+            "Value": "partition",
+            "Flags": [],
+            "Line": 190,
+            "Description": "Partitions the Collection into two Collections, where the first Collection contains the items that passed and the second contains the items that failed.",
+            "Params": [
+                "{Function} cfn Function used to test with.",
+                "{*} [thisv] Value to use as `this` when executing functions."
+            ],
+            "Returns": "{Array<Collection>} An array of partitioned Collections."
+        },
+        {
+            "Value": "map",
+            "Flags": [],
+            "Line": 209,
+            "Description": "Maps each item to another value. Identical in behaviour to [Array.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).",
+            "Params": [
+                "{Function} fn Function that produces an element of the new array.",
+                "{*} [thisv] Value to use as `this` when executing functions."
+            ],
+            "Returns": "{Array} Returns an array of the mapped values."
+        },
+        {
+            "Value": "exists",
+            "Flags": [],
+            "Line": 224,
+            "Description": "Checks if there is an item that exists that passes a test. Identical in behaviour to [Array.some()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some).",
+            "Params": [
+                "{Function} cfn Function used to test with.",
+                "{*} [thisv] Value to use as `this` when executing functions."
+            ],
+            "Returns": "{Boolean} Boolean to express whether at least one item has passed the test."
+        },
+        {
+            "Value": "every",
+            "Flags": [],
+            "Line": 241,
+            "Description": "Checks if all items pass the test. Identical in behaviour to [Array.every()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every).",
+            "Params": [
+                "{Function} cfn Function used to test with.",
+                "{*} [thisv] Value to use as `this` when executing functions."
+            ],
+            "Returns": "{Boolean} Boolean to express whether every item has passed the test."
+        },
+        {
+            "Value": "reduce",
+            "Flags": [],
+            "Line": 258,
+            "Description": "Applies a function to produce a single value. Identical in behaviour to [Array.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce).",
+            "Params": [
+                "{Function} fn Function used to reduce, taking four arguments; `Accumulator`, `CurVal`, `CurKey` & `this`.",
+                "{*} [Init] Starting value for the accumulator."
+            ],
+            "Returns": "{*}"
+        },
+        {
+            "Value": "intersect",
+            "Flags": [],
+            "Line": 286,
+            "Description": "Returns a new Collection containing items where the keys are present in both original structures.",
+            "Params": [
+                "{Collection} Second A Collection to filter against."
+            ],
+            "Returns": "{Collection}"
+        },
+        {
+            "Value": "difference",
+            "Flags": [],
+            "Line": 295,
+            "Description": "Returns a new Collection containing items where the key is present in one of the original structures, but not the other.",
+            "Params": [
+                "{Collection} Second A Collection to filter against."
+            ],
+            "Returns": "{Collection}"
+        },
+        {
+            "Value": "tap",
+            "Flags": [],
+            "Line": 305,
+            "Description": "Passes the Collection's in the function and returns the Collection itself.",
+            "Params": [
+                "{Function} fn Function to execute on the Collection."
+            ],
+            "Returns": "{Collection}"
+        },
+        {
+            "Value": "each",
+            "Flags": [],
+            "Line": 315,
+            "Description": "Iterates on the Collection's items and returns the Collection itself.",
+            "Params": [
+                "{Function} fn Function to execute on each element."
+            ],
+            "Returns": "{Collection}"
+        },
+        {
+            "Value": "clone",
+            "Flags": [],
+            "Line": 329,
+            "Description": "Creates an identical, shallow copy of this Collection.",
+            "Returns": "{Collection}"
+        },
+        {
+            "Value": "merge",
+            "Flags": [],
+            "Line": 337,
+            "Description": "Combines this Collection with others into a new Collection. None of the source Collections will be modified.",
+            "Params": [
+                "{...Collections} Collections Collections to merge into one."
+            ],
+            "Returns": "{Collection}"
+        },
+        {
+            "Value": "sort",
+            "Flags": [],
+            "Line": 352,
+            "Description": "Sorts all the elements in the Collection and returns it.",
+            "Params": [
+                "{Function} [cfn] Specifies a function that defines the sort order. If omitted, the Collection is sorted according to each character's Unicode point value, according to the string conversion of each element.",
+                "{*} [thisv] Value to use as `this` when executing functions."
+            ],
+            "Returns": "{Collection}"
+        }
+    ],
+    "DataStore": [
+        {
+            "Value": "LRR",
+            "Flags": [
+                "Variable",
+                "ReadOnly"
+            ],
+            "Line": 18,
+            "Description": "Last Recently Resolved - Caches the last data model that got resolved.",
+            "Type": "{DataModel}"
+        },
+        {
+            "Value": "set",
+            "Flags": [],
+            "Line": 39,
+            "Description": "Sets a model into the DataStore.",
+            "Params": [
+                "{String|Number} Key Key of the model to be inserted.",
+                "{Object|Array|Function|DataModel} Model The data model to set into the DataStore."
+            ],
+            "Returns": "{DataStore} The updated DataStore."
+        },
+        {
+            "Value": "delete",
+            "Flags": [],
+            "Line": 54,
+            "Description": "Deletes a model from the DataStore.",
+            "Params": [
+                "{String|Number} Key Key of the model to be erased."
+            ],
+            "Returns": "{DataStore} The updated DataStore."
+        },
+        {
+            "Value": "resolve",
+            "Flags": [],
+            "Line": 65,
+            "Description": "Resolves a data model.",
+            "Params": [
+                "{String|Number} Key Key of the model to be resolved."
+            ],
+            "Returns": "{DataModel} Model that got resolved or cached."
+        },
+        {
+            "Value": "clear",
+            "Flags": [],
+            "Line": 78,
+            "Description": "Erases every elements from this DataStore. Extended method to ensure the LRR is unavailable.",
+            "Returns": "{DataStore} The updated DataStore."
+        }
+    ],
+    "Manager": [
+        {
+            "Value": "Cache",
+            "Flags": [
+                "Variable",
+                "ReadOnly"
+            ],
+            "Line": 16,
+            "Description": "Cached dataset instances of this Manager.",
+            "Type": "{DataStore}"
+        },
+        {
+            "Value": "Holds",
+            "Flags": [
+                "Variable",
+                "Private",
+                "ReadOnly"
+            ],
+            "Line": 28,
+            "Description": "Data structure belonging to this Manager.",
+            "Type": "{Function}"
+        },
+        {
+            "Value": "add",
+            "Flags": [],
+            "Line": 42,
+            "Description": "Inserts an instance into this Manager's cache.",
+            "Params": [
+                "{String} Id ID string for the data model.",
+                "{Object|Array|Function|DataModel} Model Data model to add to this Manager."
+            ],
+            "Returns": "{BaseManager} The updated Manager."
+        },
+        {
+            "Value": "remove",
+            "Flags": [],
+            "Line": 57,
+            "Description": "Removes an instance from this Manager's cache.",
+            "Params": [
+                "{String} Id ID string of the instance."
+            ],
+            "Returns": "{Manager} The updated Manager."
+        },
+        {
+            "Value": "toObject",
+            "Flags": [],
+            "Line": 70,
+            "Description": "Serialises this Manager's cache into an object, while still preserving its original data.",
+            "Returns": "{Object} The object-form of this Manager's data cache."
+        },
+        {
+            "Value": "resolve",
+            "Flags": [],
+            "Line": 81,
+            "Description": "Resolves an instance of this Manager.",
+            "Params": [
+                "{String|*} IdOrInstance The key of the instance to resolve."
+            ],
+            "Returns": "{DataModel} An instance from this Manager."
+        }
+    ],
+    "Queue": [
+        {
+            "Value": "Values",
+            "Flags": [
+                "Variable",
+                "ReadOnly"
+            ],
+            "Line": 15,
+            "Description": "Main structure holding the Queue values.",
+            "Type": "{Array}"
+        },
+        {
+            "Value": "size",
+            "Flags": [
+                "Variable",
+                "ReadOnly"
+            ],
+            "Line": 29,
+            "Description": "Current waiting size of the Queue.",
+            "Action": "Getter",
+            "Refer": "size",
+            "Type": "{Number}"
+        },
+        {
+            "Value": "add",
+            "Flags": [],
+            "Line": 39,
+            "Description": "Adds a new entry to the end of this Queue.",
+            "Params": [
+                "{*} Val Value to be added to the Queue.",
+                "{Boolean} [Priority] Whether this item should be put at the start of the Queue."
+            ],
+            "Returns": "{Number} New size of this Queue, the waiting size."
+        },
+        {
+            "Value": "remove",
+            "Flags": [],
+            "Line": 52,
+            "Description": "Removes an element from the Queue.",
+            "Params": [
+                "{Number} Idx Index of the entry to remove.",
+                "{Number|Function} IdxOrFn Index of the entry, or a function to compare with."
+            ],
+            "Returns": "{Number} New size of this Queue."
+        },
+        {
+            "Value": "next",
+            "Flags": [],
+            "Line": 81,
+            "Description": "Fetches the current value in the Queue and removes it.",
+            "Returns": "{*}"
+        },
+        {
+            "Value": "iterate",
+            "Flags": [],
+            "Line": 91,
+            "Description": "Iterates over this Queue. Note - This function removes all the items from the Queue after iterating.",
+            "Params": [
+                "{Function} fn Function to execute per entry on this Queue.",
+                "{Object|Array} [Iterable] Optional initial values for the cache of this iterate."
+            ],
+            "Returns": "{DataStore|Queue} When an iterable is passed, a DataStore, otherwise this Queue."
+        }
+    ]
+}
