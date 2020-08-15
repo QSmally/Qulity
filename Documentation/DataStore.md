@@ -43,15 +43,15 @@ const MyDS = new Qulity.DataStore(Iterable?);
 >
 > Returns **{DataStore}** The updated DataStore.
 
-## [.clear()](https://github.com/QSmally/Qulity/blob/master/lib/Maps/DataStore.js#L65)
-> Erases every elements from this DataStore. Extended method to ensure the LRR is unavailable.
->
-> Returns **{DataStore}** The updated DataStore.
-
-## [.resolve(Key)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/DataStore.js#L76)
+## [.resolve(Key)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/DataStore.js#L65)
 > Resolves a data model.
 > | Key | Type | Description |
 > | --- | --- | --- |
 > | Key | String, Number | Key of the model to be resolved. |
 >
 > Returns **{DataModel}** Model that got resolved or cached.
+
+## [.clear()](https://github.com/QSmally/Qulity/blob/master/lib/Maps/DataStore.js#L78)
+> Erases every elements from this DataStore. Extended method to ensure the LRR is unavailable.
+>
+> Returns **{DataStore}** The updated DataStore.
