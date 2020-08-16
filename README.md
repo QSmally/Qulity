@@ -74,8 +74,8 @@ class UserManager extends Qulity.Manager {
 
 const Users = new UserManager(Client, GuildUsers, User);
 Users.Client; // Access your own variables in the Manager.
-Users.Cache;  // All 'Users' as DataStore.
 Users.Admins; // Automatically get all administrators.
+Users.Cache;  // All 'Users' as DataStore.
 
 // Access methods within the Manager.
 Users.Ban("d34hg3o");
