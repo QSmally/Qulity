@@ -53,11 +53,11 @@ const Queue = new Qulity.Queue(Iterable?);
 >
 > Returns **{Any}** 
 
-## [.iterate(fn, Iterable?)](https://github.com/QSmally/Qulity/blob/master/lib/Integrations/Queue.js#L91)
+## [.iterate(Fn, Iterable?)](https://github.com/QSmally/Qulity/blob/master/lib/Integrations/Queue.js#L91)
 > Iterates over this Queue. Note - This function removes all the items from the Queue after iterating.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | fn | Function | Function to execute per entry on this Queue. |
+> | Fn | Function | Function to execute per entry on this Queue. |
 > | Iterable? | Object, Array | Optional initial values for the cache of this iterate. |
 >
-> Returns **{DataStore|Queue}** When an iterable is passed, a DataStore, otherwise this Queue.
+> Returns **{DataStore}** The available DataStore cache.

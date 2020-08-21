@@ -3,7 +3,7 @@
         {
             "Value": "set",
             "Flags": [],
-            "Line": 25,
+            "Line": 27,
             "Description": "Main interaction point of this Collection.",
             "Params": [
                 "{*} Key Specifies a key to insert as.",
@@ -14,7 +14,7 @@
         {
             "Value": "get",
             "Flags": [],
-            "Line": 36,
+            "Line": 38,
             "Description": "Main interaction point of this Collection.",
             "Params": [
                 "{*} Key Specifies a key to fetch from this Collection."
@@ -24,7 +24,7 @@
         {
             "Value": "delete",
             "Flags": [],
-            "Line": 45,
+            "Line": 47,
             "Description": "Main interaction point of this Collection.",
             "Params": [
                 "{*} Key Specifies a key to erase from this Collection."
@@ -34,28 +34,28 @@
         {
             "Value": "toArray",
             "Flags": [],
-            "Line": 56,
+            "Line": 60,
             "Description": "Creates an ordered array of the values of this Collection.",
             "Returns": "{Array} Array of values in this Collection."
         },
         {
             "Value": "toKeyArray",
             "Flags": [],
-            "Line": 64,
+            "Line": 68,
             "Description": "Creates an ordered array of the keys of this Collection.",
             "Returns": "{Array} Array of keys in this Collection."
         },
         {
             "Value": "toObject",
             "Flags": [],
-            "Line": 72,
+            "Line": 76,
             "Description": "Creates an ordered object of all the entries of this Collection.",
             "Returns": "{Object} Object of all key/value pairs of this Collection."
         },
         {
             "Value": "first",
             "Flags": [],
-            "Line": 82,
+            "Line": 89,
             "Description": "Obtains the first value(s) from this Collection. Starting from the end if a negative amount is provided.",
             "Params": [
                 "{Number} [Amount] Amount of values to obtain from the beginning."
@@ -65,7 +65,7 @@
         {
             "Value": "last",
             "Flags": [],
-            "Line": 101,
+            "Line": 108,
             "Description": "Obtains the last value(s) from this Collection. Starting from the beginning if a negative amount is provided.",
             "Params": [
                 "{Number} [Amount] Amount of values to obtain from the end."
@@ -75,7 +75,7 @@
         {
             "Value": "random",
             "Flags": [],
-            "Line": 118,
+            "Line": 125,
             "Description": "Obtains unique random value(s) from this Collection.",
             "Params": [
                 "{Number} [Amount] Amount of values to obtain randomly."
@@ -85,7 +85,7 @@
         {
             "Value": "find",
             "Flags": [],
-            "Line": 138,
+            "Line": 145,
             "Description": "Searches for a single item where the given function returns a truthy value. This behaves like [Array.find()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find).",
             "Params": [
                 "{Function} cfn Function used to test with.",
@@ -96,7 +96,7 @@
         {
             "Value": "sweep",
             "Flags": [],
-            "Line": 155,
+            "Line": 162,
             "Description": "Removes entries that satisfy the provided filter function.",
             "Params": [
                 "{Function} Cfn Function used to test with.",
@@ -107,7 +107,7 @@
         {
             "Value": "filter",
             "Flags": [],
-            "Line": 172,
+            "Line": 179,
             "Description": "Identical to `Array.filter()`, but returns a Collection instead of an array.",
             "Params": [
                 "{Function} Cfn Function used to test with.",
@@ -118,7 +118,7 @@
         {
             "Value": "partition",
             "Flags": [],
-            "Line": 189,
+            "Line": 196,
             "Description": "Partitions the Collection into two Collections, where the first Collection contains the items that passed and the second contains the items that failed.",
             "Params": [
                 "{Function} Cfn Function used to test with.",
@@ -129,7 +129,7 @@
         {
             "Value": "map",
             "Flags": [],
-            "Line": 208,
+            "Line": 215,
             "Description": "Maps each item to another value. Identical in behaviour to [Array.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).",
             "Params": [
                 "{Function} Fn Function that produces an element of the new array.",
@@ -140,7 +140,7 @@
         {
             "Value": "exists",
             "Flags": [],
-            "Line": 223,
+            "Line": 230,
             "Description": "Checks if there is an item that exists that passes a test. Identical in behaviour to [Array.some()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some).",
             "Params": [
                 "{Function} Cfn Function used to test with.",
@@ -151,7 +151,7 @@
         {
             "Value": "every",
             "Flags": [],
-            "Line": 240,
+            "Line": 247,
             "Description": "Checks if all items pass the test. Identical in behaviour to [Array.every()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every).",
             "Params": [
                 "{Function} Cfn Function used to test with.",
@@ -162,7 +162,7 @@
         {
             "Value": "reduce",
             "Flags": [],
-            "Line": 257,
+            "Line": 264,
             "Description": "Applies a function to produce a single value. Identical in behaviour to [Array.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce).",
             "Params": [
                 "{Function} Fn Function used to reduce, taking four arguments; `Accumulator`, `CurVal`, `CurKey` & `this`.",
@@ -173,7 +173,7 @@
         {
             "Value": "intersect",
             "Flags": [],
-            "Line": 285,
+            "Line": 292,
             "Description": "Returns a new Collection containing items where the keys are present in both original structures.",
             "Params": [
                 "{Collection} Second A Collection to filter against."
@@ -183,7 +183,7 @@
         {
             "Value": "difference",
             "Flags": [],
-            "Line": 294,
+            "Line": 301,
             "Description": "Returns a new Collection containing items where the key is present in one of the original structures, but not the other.",
             "Params": [
                 "{Collection} Second A Collection to filter against."
@@ -193,7 +193,7 @@
         {
             "Value": "tap",
             "Flags": [],
-            "Line": 304,
+            "Line": 311,
             "Description": "Passes the Collection's in the function and returns the Collection itself.",
             "Params": [
                 "{Function} Fn Function to execute on the Collection."
@@ -203,7 +203,7 @@
         {
             "Value": "each",
             "Flags": [],
-            "Line": 314,
+            "Line": 321,
             "Description": "Iterates on the Collection's items and returns the Collection itself.",
             "Params": [
                 "{Function} Fn Function to execute on each element."
@@ -213,14 +213,14 @@
         {
             "Value": "clone",
             "Flags": [],
-            "Line": 328,
+            "Line": 335,
             "Description": "Creates an identical, shallow copy of this Collection.",
             "Returns": "{Collection}"
         },
         {
             "Value": "merge",
             "Flags": [],
-            "Line": 336,
+            "Line": 343,
             "Description": "Combines this Collection with others into a new Collection. None of the source Collections will be modified.",
             "Params": [
                 "{...Collections} Collections Collections to merge into one."
@@ -230,7 +230,7 @@
         {
             "Value": "sort",
             "Flags": [],
-            "Line": 351,
+            "Line": 358,
             "Description": "Sorts all the elements in the Collection and returns it.",
             "Params": [
                 "{Function} [Cfn] Specifies a function that defines the sort order. If omitted, the Collection is sorted according to each character's Unicode point value, according to the string conversion of each element.",
@@ -307,14 +307,14 @@
                 "Private",
                 "ReadOnly"
             ],
-            "Line": 28,
+            "Line": 31,
             "Description": "Data structure belonging to this Manager.",
             "Type": "{Function}"
         },
         {
             "Value": "add",
             "Flags": [],
-            "Line": 42,
+            "Line": 46,
             "Description": "Inserts an instance into this Manager's cache.",
             "Params": [
                 "{String} Id ID string for the data model.",
@@ -325,7 +325,7 @@
         {
             "Value": "remove",
             "Flags": [],
-            "Line": 57,
+            "Line": 61,
             "Description": "Removes an instance from this Manager's cache.",
             "Params": [
                 "{String} Id ID string of the instance."
@@ -335,14 +335,14 @@
         {
             "Value": "toObject",
             "Flags": [],
-            "Line": 70,
+            "Line": 74,
             "Description": "Serialises this Manager's cache into an object, while still preserving its original data.",
             "Returns": "{Object} The object-form of this Manager's data cache."
         },
         {
             "Value": "resolve",
             "Flags": [],
-            "Line": 81,
+            "Line": 85,
             "Description": "Resolves an instance of this Manager.",
             "Params": [
                 "{String|*} IdOrInstance The key of the instance to resolve."
@@ -408,10 +408,10 @@
             "Line": 91,
             "Description": "Iterates over this Queue. Note - This function removes all the items from the Queue after iterating.",
             "Params": [
-                "{Function} fn Function to execute per entry on this Queue.",
+                "{Function} Fn Function to execute per entry on this Queue.",
                 "{Object|Array} [Iterable] Optional initial values for the cache of this iterate."
             ],
-            "Returns": "{DataStore|Queue} When an iterable is passed, a DataStore, otherwise this Queue."
+            "Returns": "{DataStore} The available DataStore cache."
         }
     ]
 }
