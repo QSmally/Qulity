@@ -17,6 +17,8 @@ const MyDS = new Qulity.DataStore(Iterable?);
 | --- | --- | --- |
 | Iterable? | Array, Object | Optional initial values of this DataStore. |
 
+DataStore's are not designed to contain data that changes a lot through utility functions, rather to contain dictionary-like entries that should be fetched quickly.
+
 
 
 # Values
