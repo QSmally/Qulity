@@ -284,9 +284,20 @@
         {
             "Value": "clear",
             "Flags": [],
-            "Line": 78,
+            "Line": 81,
             "Description": "Erases every elements from this DataStore. Extended method to ensure the LRR is unavailable.",
             "Returns": "{DataStore} The updated DataStore."
+        },
+        {
+            "Value": "sweep",
+            "Flags": [],
+            "Line": 92,
+            "Description": "Removes entries that satisfy the provided filter function.",
+            "Params": [
+                "{Function} Cfn Function used to test with.",
+                "{*} [This] Value to use as `this` when executing functions."
+            ],
+            "Returns": "{Number} Number of removed entries."
         }
     ],
     "Manager": [
