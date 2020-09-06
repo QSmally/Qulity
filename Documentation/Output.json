@@ -65,7 +65,7 @@
         {
             "Value": "last",
             "Flags": [],
-            "Line": 108,
+            "Line": 110,
             "Description": "Obtains the last value(s) from this Collection. Starting from the beginning if a negative amount is provided.",
             "Params": [
                 "{Number} [Amount] Amount of values to obtain from the end."
@@ -75,7 +75,7 @@
         {
             "Value": "random",
             "Flags": [],
-            "Line": 125,
+            "Line": 127,
             "Description": "Obtains unique random value(s) from this Collection.",
             "Params": [
                 "{Number} [Amount] Amount of values to obtain randomly."
@@ -85,18 +85,18 @@
         {
             "Value": "find",
             "Flags": [],
-            "Line": 145,
+            "Line": 148,
             "Description": "Searches for a single item where the given function returns a truthy value. This behaves like [Array.find()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find).",
             "Params": [
                 "{Function} cfn Function used to test with.",
-                "{*} [thisv] Value to use as `this` when executing functions."
+                "{*} [This] Value to use as `this` when executing functions."
             ],
             "Returns": "{*} Returns the value of the element found."
         },
         {
             "Value": "sweep",
             "Flags": [],
-            "Line": 162,
+            "Line": 165,
             "Description": "Removes entries that satisfy the provided filter function.",
             "Params": [
                 "{Function} Cfn Function used to test with.",
@@ -107,7 +107,7 @@
         {
             "Value": "filter",
             "Flags": [],
-            "Line": 179,
+            "Line": 182,
             "Description": "Identical to `Array.filter()`, but returns a Collection instead of an array.",
             "Params": [
                 "{Function} Cfn Function used to test with.",
@@ -118,7 +118,7 @@
         {
             "Value": "partition",
             "Flags": [],
-            "Line": 196,
+            "Line": 199,
             "Description": "Partitions the Collection into two Collections, where the first Collection contains the items that passed and the second contains the items that failed.",
             "Params": [
                 "{Function} Cfn Function used to test with.",
@@ -129,7 +129,7 @@
         {
             "Value": "map",
             "Flags": [],
-            "Line": 215,
+            "Line": 218,
             "Description": "Maps each item to another value. Identical in behaviour to [Array.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).",
             "Params": [
                 "{Function} Fn Function that produces an element of the new array.",
@@ -140,7 +140,7 @@
         {
             "Value": "exists",
             "Flags": [],
-            "Line": 230,
+            "Line": 233,
             "Description": "Checks if there is an item that exists that passes a test. Identical in behaviour to [Array.some()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some).",
             "Params": [
                 "{Function} Cfn Function used to test with.",
@@ -151,7 +151,7 @@
         {
             "Value": "every",
             "Flags": [],
-            "Line": 247,
+            "Line": 250,
             "Description": "Checks if all items pass the test. Identical in behaviour to [Array.every()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every).",
             "Params": [
                 "{Function} Cfn Function used to test with.",
@@ -162,7 +162,7 @@
         {
             "Value": "reduce",
             "Flags": [],
-            "Line": 264,
+            "Line": 267,
             "Description": "Applies a function to produce a single value. Identical in behaviour to [Array.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce).",
             "Params": [
                 "{Function} Fn Function used to reduce, taking four arguments; `Accumulator`, `CurVal`, `CurKey` & `this`.",
@@ -173,7 +173,7 @@
         {
             "Value": "intersect",
             "Flags": [],
-            "Line": 292,
+            "Line": 295,
             "Description": "Returns a new Collection containing items where the keys are present in both original structures.",
             "Params": [
                 "{Collection} Second A Collection to filter against."
@@ -183,7 +183,7 @@
         {
             "Value": "difference",
             "Flags": [],
-            "Line": 301,
+            "Line": 304,
             "Description": "Returns a new Collection containing items where the key is present in one of the original structures, but not the other.",
             "Params": [
                 "{Collection} Second A Collection to filter against."
@@ -193,7 +193,7 @@
         {
             "Value": "tap",
             "Flags": [],
-            "Line": 311,
+            "Line": 314,
             "Description": "Passes the Collection's in the function and returns the Collection itself.",
             "Params": [
                 "{Function} Fn Function to execute on the Collection."
@@ -203,7 +203,7 @@
         {
             "Value": "each",
             "Flags": [],
-            "Line": 321,
+            "Line": 324,
             "Description": "Iterates on the Collection's items and returns the Collection itself.",
             "Params": [
                 "{Function} Fn Function to execute on each element."
@@ -213,14 +213,14 @@
         {
             "Value": "clone",
             "Flags": [],
-            "Line": 335,
+            "Line": 338,
             "Description": "Creates an identical, shallow copy of this Collection.",
             "Returns": "{Collection}"
         },
         {
             "Value": "merge",
             "Flags": [],
-            "Line": 343,
+            "Line": 346,
             "Description": "Combines this Collection with others into a new Collection. None of the source Collections will be modified.",
             "Params": [
                 "{...Collections} Collections Collections to merge into one."
@@ -230,7 +230,7 @@
         {
             "Value": "sort",
             "Flags": [],
-            "Line": 358,
+            "Line": 361,
             "Description": "Sorts all the elements in the Collection and returns it.",
             "Params": [
                 "{Function} [Cfn] Specifies a function that defines the sort order. If omitted, the Collection is sorted according to each character's Unicode point value, according to the string conversion of each element.",
