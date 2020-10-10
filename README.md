@@ -68,7 +68,7 @@ class UserManager extends Qulity.Manager {
 
     Ban (UserId)  {
         const User = this.Cache.resolve(UserId);
-        if (User && !User.Admin) User.Ban(); // Custom from User instance.
+        if (User && !User.Admin) User.Ban();
     }
 }
 
@@ -84,15 +84,15 @@ Users.Ban("d34hg3o");
 ## [Queue](https://github.com/QSmally/Qulity/blob/master/Documentation/Queue.md)
 A manager for ordening values and iterating over them.
 ```js
-const Queue = new QDB.Queue(Shards);
+const Queue = new QDB.Queue(PartialShardCache);
 
 // Iterate over the Queue items.
-Shards = Queue.iterate(async (Shard, Cache) => {
+const Shards = Queue.iterate(async (Shard, Cache) => {
     const {Token} = Cache.resolve(Shard.Id);
     // Log into the shard and caches it.
     await Shard.Login(Token);
     Cache.set(Shard.Id, Shard);
-}, BaseCache);
+}, PartialShardCache);
 ```
 
 # Issues, Contributing & License
