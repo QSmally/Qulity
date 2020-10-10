@@ -88,7 +88,7 @@
             "Line": 148,
             "Description": "Searches for a single item where the given function returns a truthy value. This behaves like [Array.find()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find).",
             "Params": [
-                "{Function} cfn Function used to test with.",
+                "{Function} Fn Function used to test with.",
                 "{*} [This] Value to use as `this` when executing functions."
             ],
             "Returns": "{*} Returns the value of the element found."
@@ -96,10 +96,10 @@
         {
             "Value": "sweep",
             "Flags": [],
-            "Line": 165,
+            "Line": 164,
             "Description": "Removes entries that satisfy the provided filter function.",
             "Params": [
-                "{Function} Cfn Function used to test with.",
+                "{Function} Fn Function used to test with.",
                 "{*} [This] Value to use as `this` when executing functions."
             ],
             "Returns": "{Number} Number of removed entries."
@@ -107,10 +107,10 @@
         {
             "Value": "filter",
             "Flags": [],
-            "Line": 182,
+            "Line": 180,
             "Description": "Identical to `Array.filter()`, but returns a Collection instead of an array.",
             "Params": [
-                "{Function} Cfn Function used to test with.",
+                "{Function} Fn Function used to test with.",
                 "{*} [This] Value to use as `this` when executing functions."
             ],
             "Returns": "{Collection} Returns the new filtered Collection."
@@ -118,10 +118,10 @@
         {
             "Value": "partition",
             "Flags": [],
-            "Line": 199,
+            "Line": 196,
             "Description": "Partitions the Collection into two Collections, where the first Collection contains the items that passed and the second contains the items that failed.",
             "Params": [
-                "{Function} Cfn Function used to test with.",
+                "{Function} Fn Function used to test with.",
                 "{*} [This] Value to use as `this` when executing functions."
             ],
             "Returns": "{Array<Collection>} An array of partitioned Collections."
@@ -129,7 +129,7 @@
         {
             "Value": "map",
             "Flags": [],
-            "Line": 218,
+            "Line": 214,
             "Description": "Maps each item to another value. Identical in behaviour to [Array.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).",
             "Params": [
                 "{Function} Fn Function that produces an element of the new array.",
@@ -140,10 +140,10 @@
         {
             "Value": "exists",
             "Flags": [],
-            "Line": 233,
+            "Line": 231,
             "Description": "Checks if there is an item that exists that passes a test. Identical in behaviour to [Array.some()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some).",
             "Params": [
-                "{Function} Cfn Function used to test with.",
+                "{Function} Fn Function used to test with.",
                 "{*} [This] Value to use as `this` when executing functions."
             ],
             "Returns": "{Boolean} Boolean to express whether at least one item has passed the test."
@@ -151,10 +151,10 @@
         {
             "Value": "every",
             "Flags": [],
-            "Line": 250,
+            "Line": 247,
             "Description": "Checks if all items pass the test. Identical in behaviour to [Array.every()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every).",
             "Params": [
-                "{Function} Cfn Function used to test with.",
+                "{Function} Fn Function used to test with.",
                 "{*} [This] Value to use as `this` when executing functions."
             ],
             "Returns": "{Boolean} Boolean to express whether every item has passed the test."
@@ -162,7 +162,7 @@
         {
             "Value": "reduce",
             "Flags": [],
-            "Line": 267,
+            "Line": 263,
             "Description": "Applies a function to produce a single value. Identical in behaviour to [Array.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce).",
             "Params": [
                 "{Function} Fn Function used to reduce, taking four arguments; `Accumulator`, `CurVal`, `CurKey` & `this`.",
@@ -173,7 +173,7 @@
         {
             "Value": "intersect",
             "Flags": [],
-            "Line": 295,
+            "Line": 286,
             "Description": "Returns a new Collection containing items where the keys are present in both original structures.",
             "Params": [
                 "{Collection} Second A Collection to filter against."
@@ -183,7 +183,7 @@
         {
             "Value": "difference",
             "Flags": [],
-            "Line": 304,
+            "Line": 295,
             "Description": "Returns a new Collection containing items where the key is present in one of the original structures, but not the other.",
             "Params": [
                 "{Collection} Second A Collection to filter against."
@@ -193,7 +193,7 @@
         {
             "Value": "tap",
             "Flags": [],
-            "Line": 314,
+            "Line": 305,
             "Description": "Passes the Collection's in the function and returns the Collection itself.",
             "Params": [
                 "{Function} Fn Function to execute on the Collection."
@@ -203,7 +203,7 @@
         {
             "Value": "each",
             "Flags": [],
-            "Line": 324,
+            "Line": 315,
             "Description": "Iterates on the Collection's items and returns the Collection itself.",
             "Params": [
                 "{Function} Fn Function to execute on each element."
@@ -213,14 +213,14 @@
         {
             "Value": "clone",
             "Flags": [],
-            "Line": 338,
+            "Line": 329,
             "Description": "Creates an identical, shallow copy of this Collection.",
             "Returns": "{Collection}"
         },
         {
             "Value": "merge",
             "Flags": [],
-            "Line": 346,
+            "Line": 337,
             "Description": "Combines this Collection with others into a new Collection. None of the source Collections will be modified.",
             "Params": [
                 "{...Collections} Collections Collections to merge into one."
@@ -230,10 +230,10 @@
         {
             "Value": "sort",
             "Flags": [],
-            "Line": 361,
+            "Line": 352,
             "Description": "Sorts all the elements in the Collection and returns it.",
             "Params": [
-                "{Function} [Cfn] Specifies a function that defines the sort order. If omitted, the Collection is sorted according to each character's Unicode point value, according to the string conversion of each element.",
+                "{Function} [Fn] Specifies a function that defines the sort order. If omitted, the Collection is sorted according to each character's Unicode point value, according to the string conversion of each element.",
                 "{*} [This] Value to use as `this` when executing functions."
             ],
             "Returns": "{Collection}"
@@ -280,24 +280,6 @@
                 "{String|Number} Key Key of the model to be resolved."
             ],
             "Returns": "{DataModel} Model that got resolved or cached."
-        },
-        {
-            "Value": "clear",
-            "Flags": [],
-            "Line": 81,
-            "Description": "Erases every elements from this DataStore. Extended method to ensure the LRR is unavailable.",
-            "Returns": "{DataStore} The updated DataStore."
-        },
-        {
-            "Value": "sweep",
-            "Flags": [],
-            "Line": 92,
-            "Description": "Removes entries that satisfy the provided filter function.",
-            "Params": [
-                "{Function} Cfn Function used to test with.",
-                "{*} [This] Value to use as `this` when executing functions."
-            ],
-            "Returns": "{Number} Number of removed entries."
         }
     ],
     "Manager": [

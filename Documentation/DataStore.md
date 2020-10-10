@@ -52,17 +52,3 @@ DataStore's are not designed to contain data that changes a lot through utility 
 > | Key | String, Number | Key of the model to be resolved. |
 >
 > Returns **{DataModel}** Model that got resolved or cached.
-
-## [.clear()](https://github.com/QSmally/Qulity/blob/master/lib/Maps/DataStore.js#L81)
-> Erases every elements from this DataStore. Extended method to ensure the LRR is unavailable.
->
-> Returns **{DataStore}** The updated DataStore.
-
-## [.sweep(Cfn, This?)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/DataStore.js#L92)
-> Removes entries that satisfy the provided filter function.
-> | Key | Type | Description |
-> | --- | --- | --- |
-> | Cfn | Function | Function used to test with. |
-> | This? | Any | Value to use as `this` when executing functions. |
->
-> Returns **{Number}** Number of removed entries.
