@@ -4,7 +4,7 @@
 
 [[Contribute](#issues-contributing--license)] [[Documentation](https://github.com/QSmally/Qulity/blob/master/Documentation/Index.md)]
 
-> Qulity is a utility module which provides you enhanced versions of the native JavaScript Map & other classes with additional methods and optimisations.
+> Qulity is a memory-based utility module which provides you enhanced versions of the native JavaScript Map with additional methods, properties and optimisations.
 
 
 # Main Features
