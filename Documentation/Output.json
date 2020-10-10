@@ -310,10 +310,10 @@
             "Line": 46,
             "Description": "Inserts an instance into this Manager's cache.",
             "Params": [
-                "{String} Id ID string for the data model.",
+                "{String} Id Identifier string for the data model.",
                 "{Object|Array|Function|DataModel} Model Data model to add to this Manager."
             ],
-            "Returns": "{BaseManager} The updated Manager."
+            "Returns": "{BaseManager} The updated Manager instance."
         },
         {
             "Value": "remove",
@@ -323,7 +323,7 @@
             "Params": [
                 "{String} Id ID string of the instance."
             ],
-            "Returns": "{Manager} The updated Manager."
+            "Returns": "{Manager} The updated Manager instance."
         },
         {
             "Value": "toObject",
