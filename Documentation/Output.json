@@ -302,7 +302,7 @@
             ],
             "Line": 31,
             "Description": "Data structure belonging to this Manager.",
-            "Type": "{Function}"
+            "Type": "{Function?}"
         },
         {
             "Value": "add",
