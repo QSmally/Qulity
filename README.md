@@ -4,14 +4,14 @@
 
 [[Contribute](#issues-contributing--license)] [[Documentation](https://github.com/QSmally/Qulity/blob/master/Documentation/Index.md)]
 
-> Qulity is a memory-based utility module which provides you enhanced versions of the native JavaScript Map with additional methods, properties and optimisations.
+> Qulity is a memory-based utility module which provides you enhanced versions of the native JavaScript Map with additional properties, methods and optimisations.
 
 
 # Main Features
-* [Collection](https://github.com/QSmally/Qulity/blob/master/Documentation/Collection.md), an enhanced Map class.
-* [DataStore](https://github.com/QSmally/Qulity/blob/master/Documentation/DataStore.md), an optimised dictionary.
-* [Manager](https://github.com/QSmally/Qulity/blob/master/Documentation/Manager.md), integrated instance manager.
-* [Queue](https://github.com/QSmally/Qulity/blob/master/Documentation/Queue.md), an element ordening integration.
+* **[Collection](https://github.com/QSmally/Qulity/blob/master/Documentation/Collection.md)** Enhanced Map class
+* **[DataStore](https://github.com/QSmally/Qulity/blob/master/Documentation/DataStore.md)** Optimised data dictionary
+* **[Manager](https://github.com/QSmally/Qulity/blob/master/Documentation/Manager.md)** Integrated API instance manager
+* **[Queue](https://github.com/QSmally/Qulity/blob/master/Documentation/Queue.md)** Element ordening integration
 
 ## Links
 * [Documentations](https://github.com/QSmally/Qulity/blob/master/Documentation/Index.md)
