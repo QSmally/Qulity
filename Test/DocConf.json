@@ -10,5 +10,7 @@
     "Repository": "https://github.com/QSmally/Qulity/blob/master/",
 
     "Keys": "Qulity.js",
-    "Typedefs": []
+    "Typedefs": [],
+
+    "Overview": ["Collection", "DataStore", "Manager", "#Integrations", "Queue"]
 }
