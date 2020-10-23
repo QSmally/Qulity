@@ -21,7 +21,7 @@ const Coll = new Qulity.Collection(Iterable?);
 
 
 # Methods
-## [.set(Key, Val)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L27)
+## [.set(Key, Val)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L25)
 > Main interaction point of this Collection.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -30,7 +30,7 @@ const Coll = new Qulity.Collection(Iterable?);
 >
 > Returns **{Collection}** 
 
-## [.get(Key)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L38)
+## [.get(Key)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L36)
 > Main interaction point of this Collection.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -38,7 +38,7 @@ const Coll = new Qulity.Collection(Iterable?);
 >
 > Returns **{Any}** Element if found.
 
-## [.delete(Key)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L47)
+## [.delete(Key)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L45)
 > Main interaction point of this Collection.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -46,22 +46,22 @@ const Coll = new Qulity.Collection(Iterable?);
 >
 > Returns **{Collection}** 
 
-## [.toArray()](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L60)
+## [.toArray()](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L58)
 > Creates an ordered array of the values of this Collection.
 >
 > Returns **{Array}** Array of values in this Collection.
 
-## [.toKeyArray()](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L68)
+## [.toKeyArray()](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L66)
 > Creates an ordered array of the keys of this Collection.
 >
 > Returns **{Array}** Array of keys in this Collection.
 
-## [.toObject()](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L76)
+## [.toObject()](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L74)
 > Creates an ordered object of all the entries of this Collection.
 >
 > Returns **{Object}** Object of all key/value pairs of this Collection.
 
-## [.first(Amount?)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L89)
+## [.first(Amount?)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L85)
 > Obtains the first value(s) from this Collection. Starting from the end if a negative amount is provided.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -69,7 +69,7 @@ const Coll = new Qulity.Collection(Iterable?);
 >
 > Returns **{Any|Array}** A single value, or an array of values if there's an amount provided.
 
-## [.last(Amount?)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L110)
+## [.last(Amount?)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L106)
 > Obtains the last value(s) from this Collection. Starting from the beginning if a negative amount is provided.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -77,7 +77,7 @@ const Coll = new Qulity.Collection(Iterable?);
 >
 > Returns **{Any|Array}** A single value, or an array of values if there's an amount provided.
 
-## [.random(Amount?)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L127)
+## [.random(Amount?)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L123)
 > Obtains unique random value(s) from this Collection.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -85,7 +85,7 @@ const Coll = new Qulity.Collection(Iterable?);
 >
 > Returns **{Any|Array}** A single value, or an array of values if there's an amount provided.
 
-## [.find(Fn, This?)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L148)
+## [.find(Fn, This?)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L144)
 > Searches for a single item where the given function returns a truthy value. This behaves like [Array.find()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find).
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -94,7 +94,7 @@ const Coll = new Qulity.Collection(Iterable?);
 >
 > Returns **{Any}** Returns the value of the element found.
 
-## [.sweep(Fn, This?)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L164)
+## [.sweep(Fn, This?)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L160)
 > Removes entries that satisfy the provided filter function.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -103,7 +103,7 @@ const Coll = new Qulity.Collection(Iterable?);
 >
 > Returns **{Number}** Number of removed entries.
 
-## [.filter(Fn, This?)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L180)
+## [.filter(Fn, This?)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L176)
 > Identical to `Array.filter()`, but returns a Collection instead of an array.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -112,7 +112,7 @@ const Coll = new Qulity.Collection(Iterable?);
 >
 > Returns **{Collection}** Returns the new filtered Collection.
 
-## [.partition(Fn, This?)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L196)
+## [.partition(Fn, This?)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L192)
 > Partitions the Collection into two Collections, where the first Collection contains the items that passed and the second contains the items that failed.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -121,7 +121,7 @@ const Coll = new Qulity.Collection(Iterable?);
 >
 > Returns **{Array<Collection>}** An array of partitioned Collections.
 
-## [.map(Fn, This?)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L214)
+## [.map(Fn, This?)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L210)
 > Maps each item to another value. Identical in behaviour to [Array.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -130,7 +130,7 @@ const Coll = new Qulity.Collection(Iterable?);
 >
 > Returns **{Array}** Returns an array of the mapped values.
 
-## [.exists(Fn, This?)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L231)
+## [.exists(Fn, This?)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L227)
 > Checks if there is an item that exists that passes a test. Identical in behaviour to [Array.some()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some).
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -139,7 +139,7 @@ const Coll = new Qulity.Collection(Iterable?);
 >
 > Returns **{Boolean}** Boolean to express whether at least one item has passed the test.
 
-## [.every(Fn, This?)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L247)
+## [.every(Fn, This?)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L243)
 > Checks if all items pass the test. Identical in behaviour to [Array.every()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every).
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -148,7 +148,7 @@ const Coll = new Qulity.Collection(Iterable?);
 >
 > Returns **{Boolean}** Boolean to express whether every item has passed the test.
 
-## [.reduce(Fn, Init?)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L263)
+## [.reduce(Fn, Init?)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L259)
 > Applies a function to produce a single value. Identical in behaviour to [Array.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce).
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -157,7 +157,7 @@ const Coll = new Qulity.Collection(Iterable?);
 >
 > Returns **{Any}** 
 
-## [.intersect(Second)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L286)
+## [.intersect(Second)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L282)
 > Returns a new Collection containing items where the keys are present in both original structures.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -165,7 +165,7 @@ const Coll = new Qulity.Collection(Iterable?);
 >
 > Returns **{Collection}** 
 
-## [.difference(Second)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L295)
+## [.difference(Second)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L291)
 > Returns a new Collection containing items where the key is present in one of the original structures, but not the other.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -173,7 +173,7 @@ const Coll = new Qulity.Collection(Iterable?);
 >
 > Returns **{Collection}** 
 
-## [.tap(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L305)
+## [.tap(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L301)
 > Passes the Collection's in the function and returns the Collection itself.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -181,7 +181,7 @@ const Coll = new Qulity.Collection(Iterable?);
 >
 > Returns **{Collection}** 
 
-## [.each(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L315)
+## [.each(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L311)
 > Iterates on the Collection's items and returns the Collection itself.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -189,12 +189,12 @@ const Coll = new Qulity.Collection(Iterable?);
 >
 > Returns **{Collection}** 
 
-## [.clone()](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L329)
+## [.clone()](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L325)
 > Creates an identical, shallow copy of this Collection.
 >
 > Returns **{Collection}** 
 
-## [.merge(Collections)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L337)
+## [.merge(Collections)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L333)
 > Combines this Collection with others into a new Collection. None of the source Collections will be modified.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -202,7 +202,7 @@ const Coll = new Qulity.Collection(Iterable?);
 >
 > Returns **{Collection}** 
 
-## [.sort(Fn?, This?)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L352)
+## [.sort(Fn?, This?)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L348)
 > Sorts all the elements in the Collection and returns it.
 > | Key | Type | Description |
 > | --- | --- | --- |
