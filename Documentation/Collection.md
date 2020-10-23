@@ -9,7 +9,7 @@
 **Integrations**
 * [Queue](https://github.com/QSmally/Qulity/blob/master/Documentation/Queue.md)
 
-An extended JavaScript Map with additional utility methods.
+An extended JavaScript Map with additional properties, methods and optimisations.
 ```js
 const Coll = new Qulity.Collection(Iterable?);
 ```
