@@ -3,7 +3,7 @@
         {
             "Value": "set",
             "Flags": [],
-            "Line": 25,
+            "Line": 23,
             "Description": "Main interaction point of this Collection.",
             "Params": [
                 "{*} Key Specifies a key to insert as.",
@@ -14,17 +14,27 @@
         {
             "Value": "get",
             "Flags": [],
-            "Line": 36,
+            "Line": 34,
             "Description": "Main interaction point of this Collection.",
             "Params": [
                 "{*} Key Specifies a key to fetch from this Collection."
             ],
-            "Returns": "{*} Element if found."
+            "Returns": "{*} If found, the element from this key."
+        },
+        {
+            "Value": "has",
+            "Flags": [],
+            "Line": 43,
+            "Description": "Main interaction point of this Collection.",
+            "Params": [
+                "{*} Key Specifies a key to see if it exists."
+            ],
+            "Returns": "{Boolean} A boolean value to indicate whether this element exists."
         },
         {
             "Value": "delete",
             "Flags": [],
-            "Line": 45,
+            "Line": 52,
             "Description": "Main interaction point of this Collection.",
             "Params": [
                 "{*} Key Specifies a key to erase from this Collection."
@@ -34,28 +44,28 @@
         {
             "Value": "toArray",
             "Flags": [],
-            "Line": 58,
+            "Line": 65,
             "Description": "Creates an ordered array of the values of this Collection.",
             "Returns": "{Array} Array of values in this Collection."
         },
         {
             "Value": "toKeyArray",
             "Flags": [],
-            "Line": 66,
+            "Line": 73,
             "Description": "Creates an ordered array of the keys of this Collection.",
             "Returns": "{Array} Array of keys in this Collection."
         },
         {
             "Value": "toObject",
             "Flags": [],
-            "Line": 74,
+            "Line": 81,
             "Description": "Creates an ordered object of all the entries of this Collection.",
             "Returns": "{Object} Object of all key/value pairs of this Collection."
         },
         {
             "Value": "first",
             "Flags": [],
-            "Line": 85,
+            "Line": 92,
             "Description": "Obtains the first value(s) from this Collection. Starting from the end if a negative amount is provided.",
             "Params": [
                 "{Number} [Amount] Amount of values to obtain from the beginning."
@@ -65,7 +75,7 @@
         {
             "Value": "last",
             "Flags": [],
-            "Line": 106,
+            "Line": 113,
             "Description": "Obtains the last value(s) from this Collection. Starting from the beginning if a negative amount is provided.",
             "Params": [
                 "{Number} [Amount] Amount of values to obtain from the end."
@@ -75,7 +85,7 @@
         {
             "Value": "random",
             "Flags": [],
-            "Line": 123,
+            "Line": 130,
             "Description": "Obtains unique random value(s) from this Collection.",
             "Params": [
                 "{Number} [Amount] Amount of values to obtain randomly."
@@ -85,7 +95,7 @@
         {
             "Value": "find",
             "Flags": [],
-            "Line": 144,
+            "Line": 151,
             "Description": "Searches for a single item where the given function returns a truthy value. This behaves like [Array.find()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find).",
             "Params": [
                 "{Function} Fn Function used to test with.",
@@ -94,53 +104,9 @@
             "Returns": "{*} Returns the value of the element found."
         },
         {
-            "Value": "sweep",
-            "Flags": [],
-            "Line": 160,
-            "Description": "Removes entries that satisfy the provided filter function.",
-            "Params": [
-                "{Function} Fn Function used to test with.",
-                "{*} [This] Value to use as `this` when executing functions."
-            ],
-            "Returns": "{Number} Number of removed entries."
-        },
-        {
-            "Value": "filter",
-            "Flags": [],
-            "Line": 176,
-            "Description": "Identical to `Array.filter()`, but returns a Collection instead of an array.",
-            "Params": [
-                "{Function} Fn Function used to test with.",
-                "{*} [This] Value to use as `this` when executing functions."
-            ],
-            "Returns": "{Collection} Returns the new filtered Collection."
-        },
-        {
-            "Value": "partition",
-            "Flags": [],
-            "Line": 192,
-            "Description": "Partitions the Collection into two Collections, where the first Collection contains the items that passed and the second contains the items that failed.",
-            "Params": [
-                "{Function} Fn Function used to test with.",
-                "{*} [This] Value to use as `this` when executing functions."
-            ],
-            "Returns": "{Array<Collection>} An array of partitioned Collections."
-        },
-        {
-            "Value": "map",
-            "Flags": [],
-            "Line": 210,
-            "Description": "Maps each item to another value. Identical in behaviour to [Array.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).",
-            "Params": [
-                "{Function} Fn Function that produces an element of the new array.",
-                "{*} [This] Value to use as `this` when executing functions."
-            ],
-            "Returns": "{Array} Returns an array of the mapped values."
-        },
-        {
             "Value": "exists",
             "Flags": [],
-            "Line": 227,
+            "Line": 167,
             "Description": "Checks if there is an item that exists that passes a test. Identical in behaviour to [Array.some()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some).",
             "Params": [
                 "{Function} Fn Function used to test with.",
@@ -151,7 +117,7 @@
         {
             "Value": "every",
             "Flags": [],
-            "Line": 243,
+            "Line": 183,
             "Description": "Checks if all items pass the test. Identical in behaviour to [Array.every()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every).",
             "Params": [
                 "{Function} Fn Function used to test with.",
@@ -160,9 +126,53 @@
             "Returns": "{Boolean} Boolean to express whether every item has passed the test."
         },
         {
+            "Value": "sweep",
+            "Flags": [],
+            "Line": 201,
+            "Description": "Removes entries that satisfy the provided filter function.",
+            "Params": [
+                "{Function} Fn Function used to test with.",
+                "{*} [This] Value to use as `this` when executing functions."
+            ],
+            "Returns": "{Number} Number of removed entries."
+        },
+        {
+            "Value": "filter",
+            "Flags": [],
+            "Line": 217,
+            "Description": "Identical to `Array.filter()`, but returns a Collection instead of an array.",
+            "Params": [
+                "{Function} Fn Function used to test with.",
+                "{*} [This] Value to use as `this` when executing functions."
+            ],
+            "Returns": "{Collection} Returns the new filtered Collection."
+        },
+        {
+            "Value": "partition",
+            "Flags": [],
+            "Line": 233,
+            "Description": "Partitions the Collection into two Collections, where the first Collection contains the items that passed and the second contains the items that failed.",
+            "Params": [
+                "{Function} Fn Function used to test with.",
+                "{*} [This] Value to use as `this` when executing functions."
+            ],
+            "Returns": "{Array<Collection>} An array of partitioned Collections."
+        },
+        {
+            "Value": "map",
+            "Flags": [],
+            "Line": 251,
+            "Description": "Maps each item to another value. Identical in behaviour to [Array.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map).",
+            "Params": [
+                "{Function} Fn Function that produces an element of the new array.",
+                "{*} [This] Value to use as `this` when executing functions."
+            ],
+            "Returns": "{Array} Returns an array of the mapped values."
+        },
+        {
             "Value": "reduce",
             "Flags": [],
-            "Line": 259,
+            "Line": 268,
             "Description": "Applies a function to produce a single value. Identical in behaviour to [Array.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce).",
             "Params": [
                 "{Function} Fn Function used to reduce, taking four arguments; `Accumulator`, `CurVal`, `CurKey` & `this`.",
@@ -173,7 +183,7 @@
         {
             "Value": "intersect",
             "Flags": [],
-            "Line": 282,
+            "Line": 291,
             "Description": "Returns a new Collection containing items where the keys are present in both original structures.",
             "Params": [
                 "{Collection} Second A Collection to filter against."
@@ -183,7 +193,7 @@
         {
             "Value": "difference",
             "Flags": [],
-            "Line": 291,
+            "Line": 300,
             "Description": "Returns a new Collection containing items where the key is present in one of the original structures, but not the other.",
             "Params": [
                 "{Collection} Second A Collection to filter against."
@@ -191,36 +201,16 @@
             "Returns": "{Collection}"
         },
         {
-            "Value": "tap",
-            "Flags": [],
-            "Line": 301,
-            "Description": "Passes the Collection's in the function and returns the Collection itself.",
-            "Params": [
-                "{Function} Fn Function to execute on the Collection."
-            ],
-            "Returns": "{Collection}"
-        },
-        {
-            "Value": "each",
-            "Flags": [],
-            "Line": 311,
-            "Description": "Iterates on the Collection's items and returns the Collection itself.",
-            "Params": [
-                "{Function} Fn Function to execute on each element."
-            ],
-            "Returns": "{Collection}"
-        },
-        {
             "Value": "clone",
             "Flags": [],
-            "Line": 325,
+            "Line": 310,
             "Description": "Creates an identical, shallow copy of this Collection.",
             "Returns": "{Collection}"
         },
         {
             "Value": "merge",
             "Flags": [],
-            "Line": 333,
+            "Line": 318,
             "Description": "Combines this Collection with others into a new Collection. None of the source Collections will be modified.",
             "Params": [
                 "{...Collections} Collections Collections to merge into one."
@@ -230,11 +220,31 @@
         {
             "Value": "sort",
             "Flags": [],
-            "Line": 348,
+            "Line": 333,
             "Description": "Sorts all the elements in the Collection and returns it.",
             "Params": [
                 "{Function} [Fn] Specifies a function that defines the sort order. If omitted, the Collection is sorted according to each character's Unicode point value, according to the string conversion of each element.",
                 "{*} [This] Value to use as `this` when executing functions."
+            ],
+            "Returns": "{Collection}"
+        },
+        {
+            "Value": "tap",
+            "Flags": [],
+            "Line": 354,
+            "Description": "Passes the Collection's in the function and returns the Collection itself.",
+            "Params": [
+                "{Function} Fn Function to execute on the Collection."
+            ],
+            "Returns": "{Collection}"
+        },
+        {
+            "Value": "each",
+            "Flags": [],
+            "Line": 364,
+            "Description": "Iterates on the Collection's items and returns the Collection itself.",
+            "Params": [
+                "{Function} Fn Function to execute on each element."
             ],
             "Returns": "{Collection}"
         }
