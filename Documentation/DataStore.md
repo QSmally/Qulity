@@ -29,7 +29,7 @@ DataStore's are not designed to contain data that changes a lot through utility 
 > Type **{DataModel}**
 
 # Methods
-## [.set(Key, Model)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/DataStore.js#L39)
+## [.set(Key, Model)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/DataStore.js#L37)
 > Sets a model into the DataStore.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -38,7 +38,7 @@ DataStore's are not designed to contain data that changes a lot through utility 
 >
 > Returns **{DataStore}** The updated DataStore.
 
-## [.delete(Key)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/DataStore.js#L54)
+## [.delete(Key)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/DataStore.js#L52)
 > Deletes a model from the DataStore.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -46,7 +46,7 @@ DataStore's are not designed to contain data that changes a lot through utility 
 >
 > Returns **{DataStore}** The updated DataStore.
 
-## [.resolve(Key)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/DataStore.js#L65)
+## [.resolve(Key)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/DataStore.js#L63)
 > Resolves a data model.
 > | Key | Type | Description |
 > | --- | --- | --- |
