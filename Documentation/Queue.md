@@ -52,10 +52,10 @@ const Queue = new Qulity.Queue(Iterable?);
 ## [.next()](https://github.com/QSmally/Qulity/blob/master/lib/Integrations/Queue.js#L81)
 > Fetches the current value in the Queue and removes it.
 >
-> Returns **{Any}** 
+> Returns **{Any}** Attaches the next element of this Queue.
 
 ## [.iterate(Fn, Iterable?)](https://github.com/QSmally/Qulity/blob/master/lib/Integrations/Queue.js#L91)
-> Iterates over this Queue. Note - This function removes all the items from the Queue after iterating.
+> Iterates over this Queue. **Note** This function removes all the items from the Queue after iterating.
 > | Key | Type | Description |
 > | --- | --- | --- |
 > | Fn | Function | Function to execute per entry on this Queue. |

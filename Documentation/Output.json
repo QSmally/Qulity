@@ -413,13 +413,13 @@
             "Flags": [],
             "Line": 81,
             "Description": "Fetches the current value in the Queue and removes it.",
-            "Returns": "{*}"
+            "Returns": "{*} Attaches the next element of this Queue."
         },
         {
             "Value": "iterate",
             "Flags": [],
             "Line": 91,
-            "Description": "Iterates over this Queue. Note - This function removes all the items from the Queue after iterating.",
+            "Description": "Iterates over this Queue. **Note** This function removes all the items from the Queue after iterating.",
             "Params": [
                 "{Function} Fn Function to execute per entry on this Queue.",
                 "{Object|Array} [Iterable] Optional initial values for the cache of this iterate."
