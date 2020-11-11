@@ -70,6 +70,9 @@ module.exports = (Qulity, Tap) => {
     Tap("Collection#merge1", Col.merge(NewCol).toArray(),    ["doo", "bar", "woo", "voo", "goo", "doo"]);
     Tap("Collection#merge2", Col.merge(NewCol).toKeyArray(), ["roo", "foo", "wee", "bee", "zoo", "ree"]);
 
+    Tap("Collection#implement1", Col.implement(NewCol).toArray(), ["doo", "bar", "woo", "voo", "goo", "doo"]);
+    Tap("Collection#implement2", Col.toKeyArray(),                ["roo", "foo", "wee", "bee", "zoo", "ree"]);
+
     let UnsortedCol = new Qulity.Collection({"foo": 347, "bar": 92, "roo": 287, "doo": 38, "boo": 734});
     Tap("Collection#sort", UnsortedCol.sort((a, b) => b - a).toArray(), [734, 347, 287, 92, 38]);
 
