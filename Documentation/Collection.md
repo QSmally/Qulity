@@ -165,28 +165,28 @@ const Coll = new Qulity.Collection(Iterable?);
 >
 > Returns **{Any}** 
 
-## [.intersect(Second)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L292)
+## [.intersect(Secondary)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L292)
 > Returns a new Collection containing items where the keys are present in both original structures.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | Second | Collection | A Collection to filter against. |
+> | Secondary | Collection | A Collection to filter against. |
 >
 > Returns **{Collection}** 
 
-## [.difference(Second)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L301)
+## [.difference(Secondary)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L301)
 > Returns a new Collection containing items where the key is present in one of the original structures, but not the other.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | Second | Collection | A Collection to filter against. |
+> | Secondary | Collection | A Collection to filter against. |
 >
 > Returns **{Collection}** 
 
 ## [.clone()](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L311)
-> Creates an identical, shallow copy of this Collection.
+> Creates an identical, deep copy of this Collection.
 >
 > Returns **{Collection}** 
 
-## [.merge(Collections)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L319)
+## [.merge(Collections)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L321)
 > Combines this Collection with others into a new Collection. None of the source Collections will be modified.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -194,7 +194,7 @@ const Coll = new Qulity.Collection(Iterable?);
 >
 > Returns **{Collection}** 
 
-## [.implement(Collections)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L334)
+## [.implement(Collections)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L336)
 > Merges the given Collections into this instance Collection.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -202,7 +202,7 @@ const Coll = new Qulity.Collection(Iterable?);
 >
 > Returns **{Collection}** 
 
-## [.sort(Fn?, This?)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L347)
+## [.sort(Fn?, This?)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L349)
 > Sorts all the elements in the Collection and returns it.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -211,7 +211,7 @@ const Coll = new Qulity.Collection(Iterable?);
 >
 > Returns **{Collection}** 
 
-## [.tap(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L369)
+## [.tap(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L371)
 > Passes the Collection's in the function and returns the Collection itself.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -219,7 +219,7 @@ const Coll = new Qulity.Collection(Iterable?);
 >
 > Returns **{Collection}** 
 
-## [.each(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L379)
+## [.each(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Maps/Collection.js#L381)
 > Iterates on the Collection's items and returns the Collection itself.
 > | Key | Type | Description |
 > | --- | --- | --- |

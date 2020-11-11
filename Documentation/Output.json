@@ -186,7 +186,7 @@
             "Line": 292,
             "Description": "Returns a new Collection containing items where the keys are present in both original structures.",
             "Params": [
-                "{Collection} Second A Collection to filter against."
+                "{Collection} Secondary A Collection to filter against."
             ],
             "Returns": "{Collection}"
         },
@@ -196,7 +196,7 @@
             "Line": 301,
             "Description": "Returns a new Collection containing items where the key is present in one of the original structures, but not the other.",
             "Params": [
-                "{Collection} Second A Collection to filter against."
+                "{Collection} Secondary A Collection to filter against."
             ],
             "Returns": "{Collection}"
         },
@@ -204,13 +204,13 @@
             "Value": "clone",
             "Flags": [],
             "Line": 311,
-            "Description": "Creates an identical, shallow copy of this Collection.",
+            "Description": "Creates an identical, deep copy of this Collection.",
             "Returns": "{Collection}"
         },
         {
             "Value": "merge",
             "Flags": [],
-            "Line": 319,
+            "Line": 321,
             "Description": "Combines this Collection with others into a new Collection. None of the source Collections will be modified.",
             "Params": [
                 "{...Collections} Collections Collections to merge into one."
@@ -220,7 +220,7 @@
         {
             "Value": "implement",
             "Flags": [],
-            "Line": 334,
+            "Line": 336,
             "Description": "Merges the given Collections into this instance Collection.",
             "Params": [
                 " {...Collections} Collections Collections to merge into this instance."
@@ -230,7 +230,7 @@
         {
             "Value": "sort",
             "Flags": [],
-            "Line": 347,
+            "Line": 349,
             "Description": "Sorts all the elements in the Collection and returns it.",
             "Params": [
                 "{Function} [Fn] Specifies a function that defines the sort order. If omitted, the Collection is sorted according to each character's Unicode point value, according to the string conversion of each element.",
@@ -241,7 +241,7 @@
         {
             "Value": "tap",
             "Flags": [],
-            "Line": 369,
+            "Line": 371,
             "Description": "Passes the Collection's in the function and returns the Collection itself.",
             "Params": [
                 "{Function} Fn Function to execute on the Collection."
@@ -251,7 +251,7 @@
         {
             "Value": "each",
             "Flags": [],
-            "Line": 379,
+            "Line": 381,
             "Description": "Iterates on the Collection's items and returns the Collection itself.",
             "Params": [
                 "{Function} Fn Function to execute on each element."
