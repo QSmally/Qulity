@@ -1,7 +1,7 @@
 
 /*
     Qulity is built from the ground up by QSmally.
-    Qulity © 2020 by QSmally, all rights reserved.
+    Qulity © 2021 by QSmally, all rights reserved.
     Please report bugs by creating an issue on the repo.
 
     Originally included in project QSmally/QDB.
@@ -12,12 +12,4 @@
 */
 
 
-module.exports = {
-
-    Collection: require("./lib/Maps/Collection"),
-    DataStore:  require("./lib/Maps/DataStore"),
-    Manager:    require("./lib/Maps/Manager"),
-
-    Queue: require("./lib/Integrations/Queue")
-
-};
+module.exports = {};
