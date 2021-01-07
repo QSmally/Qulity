@@ -3,14 +3,12 @@
     "Out":    "Documentation/",
     "Index":  true,
 
-    "Additional": {
-        "DataStore": "DataStore's are not designed to contain data that changes a lot through utility functions, rather to contain dictionary-like entries that should be fetched quickly."
-    },
+    "Additional": {},
 
     "Repository": "https://github.com/QSmally/Qulity/blob/master/",
 
     "Keys": "Qulity.js",
     "Typedefs": [],
 
-    "Overview": ["Collection", "DataStore", "Manager", "#Integrations", "Queue"]
+    "Overview": ["Collection"]
 }
