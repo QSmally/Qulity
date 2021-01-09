@@ -64,3 +64,27 @@ const Col = new Qulity.Collection(Iterable?);
 > Creates an ordered array of the keys of this Collection.
 >
 > Returns **{Array}** Array of keys in this Collection.
+
+## [.first(Amount?)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L94)
+> Obtains the first value(s) from this Collection. Starting from the end if a negative amount is provided.
+> | Key | Type | Description |
+> | --- | --- | --- |
+> | Amount? | Number | Amount of values to obtain from the beginning. |
+>
+> Returns **{Any|Array}** A single value, or an array of values if there's an amount provided.
+
+## [.last(Amount?)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L115)
+> Obtains the last value(s) from this Collection. Starting from the beginning if a negative amount is provided.
+> | Key | Type | Description |
+> | --- | --- | --- |
+> | Amount? | Number | Amount of values to obtain from the end. |
+>
+> Returns **{Any|Array}** A single value, or an array of values if there's an amount provided.
+
+## [.find(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L132)
+> Searches for a specific item where the given function returns a truthy value.
+> | Key | Type | Description |
+> | --- | --- | --- |
+> | Fn | Function | Function used to test iterating elements with. |
+>
+> Returns **{Any}** Returns the value of the element found.

@@ -65,6 +65,36 @@
             "Line": 83,
             "Description": "Creates an ordered array of the keys of this Collection.",
             "Returns": "{Array} Array of keys in this Collection."
+        },
+        {
+            "Value": "first",
+            "Flags": [],
+            "Line": 94,
+            "Description": "Obtains the first value(s) from this Collection. Starting from the end if a negative amount is provided.",
+            "Params": [
+                "{Number} [Amount] Amount of values to obtain from the beginning."
+            ],
+            "Returns": "{*|Array} A single value, or an array of values if there's an amount provided."
+        },
+        {
+            "Value": "last",
+            "Flags": [],
+            "Line": 115,
+            "Description": "Obtains the last value(s) from this Collection. Starting from the beginning if a negative amount is provided.",
+            "Params": [
+                "{Number} [Amount] Amount of values to obtain from the end."
+            ],
+            "Returns": "{*|Array} A single value, or an array of values if there's an amount provided."
+        },
+        {
+            "Value": "find",
+            "Flags": [],
+            "Line": 132,
+            "Description": "Searches for a specific item where the given function returns a truthy value.",
+            "Params": [
+                "{Function} Fn Function used to test iterating elements with."
+            ],
+            "Returns": "{*} Returns the value of the element found."
         }
     ]
 }
