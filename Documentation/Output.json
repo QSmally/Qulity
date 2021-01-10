@@ -95,6 +95,16 @@
                 "{Function} Fn Function used to test iterating elements with."
             ],
             "Returns": "{*} Returns the value of the element found."
+        },
+        {
+            "Value": "exists",
+            "Flags": [],
+            "Line": 147,
+            "Description": "Checks if there is an item that exists that passes a test.",
+            "Params": [
+                "{Function} Fn Function used to test iterating elements with."
+            ],
+            "Returns": "{Boolean} Returns a boolean based on whether or not an element was found."
         }
     ]
 }

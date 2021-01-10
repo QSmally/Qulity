@@ -88,3 +88,11 @@ const Col = new Qulity.Collection(Iterable?);
 > | Fn | Function | Function used to test iterating elements with. |
 >
 > Returns **{Any}** Returns the value of the element found.
+
+## [.exists(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L147)
+> Checks if there is an item that exists that passes a test.
+> | Key | Type | Description |
+> | --- | --- | --- |
+> | Fn | Function | Function used to test iterating elements with. |
+>
+> Returns **{Boolean}** Returns a boolean based on whether or not an element was found.
