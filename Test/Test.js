@@ -44,4 +44,8 @@ module.exports = (Qulity, Tap) => {
     Tap("Collection exists 2", Col.exists((_, K) => K === "foo"), true);
     Tap("Collection exists 3", Col.exists(V => V === "none"), false);
 
+    Tap("Collection every", Col.every(Item => Item.length === 3), true);
+    Tap("Collection every 2", Col.every(Item => Item.length === 4), false);
+    Tap("Collection every 3", Col.every(Item => Item === "doo"), false);
+
 }
