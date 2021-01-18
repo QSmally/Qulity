@@ -74,7 +74,7 @@
             "Params": [
                 "{Number} [Amount] Amount of values to obtain from the beginning."
             ],
-            "Returns": "{*|Array} A single value, or an array of values if there's an amount provided."
+            "Returns": "{*|Collection} A single value, or a new Collection of entries if there's an amount provided."
         },
         {
             "Value": "last",
@@ -84,12 +84,12 @@
             "Params": [
                 "{Number} [Amount] Amount of values to obtain from the end."
             ],
-            "Returns": "{*|Array} A single value, or an array of values if there's an amount provided."
+            "Returns": "{*|Collection} A single value, or a new Collection of entries if there's an amount provided."
         },
         {
             "Value": "find",
             "Flags": [],
-            "Line": 132,
+            "Line": 133,
             "Description": "Searches for a specific item where the given function returns a truthy value.",
             "Params": [
                 "{Function} Fn Function used to test iterating elements with."
@@ -99,12 +99,22 @@
         {
             "Value": "exists",
             "Flags": [],
-            "Line": 147,
+            "Line": 148,
             "Description": "Checks if there is an item that exists that passes a test.",
             "Params": [
                 "{Function} Fn Function used to test iterating elements with."
             ],
             "Returns": "{Boolean} Returns a boolean based on whether or not an element was found."
+        },
+        {
+            "Value": "every",
+            "Flags": [],
+            "Line": 163,
+            "Description": "Checks whether all the elements in this Collection pass the test.",
+            "Params": [
+                "{Function} Fn Function used to test iterating elements with."
+            ],
+            "Returns": "{Boolean} Returns a boolean based on whether or not all elements pass the test."
         }
     ]
 }

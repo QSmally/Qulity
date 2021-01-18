@@ -71,7 +71,7 @@ const Col = new Qulity.Collection(Iterable?);
 > | --- | --- | --- |
 > | Amount? | Number | Amount of values to obtain from the beginning. |
 >
-> Returns **{Any|Array}** A single value, or an array of values if there's an amount provided.
+> Returns **{Any|Collection}** A single value, or a new Collection of entries if there's an amount provided.
 
 ## [.last(Amount?)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L115)
 > Obtains the last value(s) from this Collection. Starting from the beginning if a negative amount is provided.
@@ -79,9 +79,9 @@ const Col = new Qulity.Collection(Iterable?);
 > | --- | --- | --- |
 > | Amount? | Number | Amount of values to obtain from the end. |
 >
-> Returns **{Any|Array}** A single value, or an array of values if there's an amount provided.
+> Returns **{Any|Collection}** A single value, or a new Collection of entries if there's an amount provided.
 
-## [.find(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L132)
+## [.find(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L133)
 > Searches for a specific item where the given function returns a truthy value.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -89,10 +89,18 @@ const Col = new Qulity.Collection(Iterable?);
 >
 > Returns **{Any}** Returns the value of the element found.
 
-## [.exists(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L147)
+## [.exists(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L148)
 > Checks if there is an item that exists that passes a test.
 > | Key | Type | Description |
 > | --- | --- | --- |
 > | Fn | Function | Function used to test iterating elements with. |
 >
 > Returns **{Boolean}** Returns a boolean based on whether or not an element was found.
+
+## [.every(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L163)
+> Checks whether all the elements in this Collection pass the test.
+> | Key | Type | Description |
+> | --- | --- | --- |
+> | Fn | Function | Function used to test iterating elements with. |
+>
+> Returns **{Boolean}** Returns a boolean based on whether or not all elements pass the test.
