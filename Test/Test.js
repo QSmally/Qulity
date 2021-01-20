@@ -44,6 +44,22 @@ module.exports = (Qulity, Tap) => {
     Tap("Collection filter 2", Col.filter((_, K) => K !== "roo").toArray(), ["bar", "new"]);
     Tap("Collection filter 3", Col.filter(V => V === "none").toArray(), []);
 
+    const Col2 = Col.clone();
+
+    Tap("Collection clone", Col.size === Col2.size, true);
+    Tap("Collection clone 2", Col2.toArray(), ["doo", "bar", "new"]);
+
+    Tap("Collection sweep", Col2.sweep(V => V === "bar"), 1);
+    Tap("Collection sweep 2", Col2.toArray(), ["doo", "new"]);
+    Tap("Collection sweep 3", Col2.sweep((_, K) => K !== "roo"), 1);
+    Tap("Collection sweep 4", Col2.toArray(), ["doo"]);
+    Tap("Collection sweep 5", Col2.sweep(V => V === "none"), 0);
+    Tap("Collection sweep 6", Col2.toArray(), ["doo"]);
+    
+    Tap("Collection partition", Col.partition(V => V === "bar").map(C => C.toArray()), [["bar"], ["doo", "new"]]);
+    Tap("Collection partition 2", Col.partition((_, K) => K !== "roo").map(C => C.toArray()), [["bar", "new"], ["doo"]]);
+    Tap("Collection partition 3", Col.partition(V => V === "none").map(C => C.toArray()), [[], ["bar", "doo", "new"]]);
+
     Tap("Collection exists", Col.exists(V => V === "bar"), true);
     Tap("Collection exists 2", Col.exists((_, K) => K === "foo"), true);
     Tap("Collection exists 3", Col.exists(V => V === "none"), false);
