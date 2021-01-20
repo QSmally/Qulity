@@ -8,7 +8,7 @@
 
 
 # Main Features
-Version 2 of Qulity is not yet available or stable, please use the [v1 branch](https://github.com/QSmally/Qulity/tree/v1).
+* [Collections](https://github.com/QSmally/Qulity/blob/master/Documentation/Collection.md)
 
 ## Links
 * [Documentations](https://github.com/QSmally/Qulity/blob/master/Documentation/Index.md)
