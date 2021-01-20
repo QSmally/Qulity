@@ -58,7 +58,10 @@ module.exports = (Qulity, Tap) => {
     
     Tap("Collection partition", Col.partition(V => V === "bar").map(C => C.toArray()), [["bar"], ["doo", "new"]]);
     Tap("Collection partition 2", Col.partition((_, K) => K !== "roo").map(C => C.toArray()), [["bar", "new"], ["doo"]]);
-    Tap("Collection partition 3", Col.partition(V => V === "none").map(C => C.toArray()), [[], ["bar", "doo", "new"]]);
+    Tap("Collection partition 3", Col.partition(V => V === "none").map(C => C.toArray()), [[], ["doo", "bar", "new"]]);
+    Tap("Collection partition 4", Col.partition(V => V === "none", 4).map(C => C.toArray()), [[], ["doo", "bar", "new"], [], []]);
+    Tap("Collection partition 5", Col.partition(_ => 2, 4).map(C => C.toArray()), [[], [], ["doo", "bar", "new"], []]);
+    Tap("Collection partition 6", Col.partition(_ => 2, 4).length, 4);
 
     Tap("Collection exists", Col.exists(V => V === "bar"), true);
     Tap("Collection exists 2", Col.exists((_, K) => K === "foo"), true);
