@@ -65,7 +65,12 @@ const Col = new Qulity.Collection(Iterable?);
 >
 > Returns **{Array}** Array of keys in this Collection.
 
-## [.first(Amount?)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L94)
+## [.toPairObject()](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L91)
+> Creates an ordered object of all the entries of this Collection.
+>
+> Returns **{Object}** Object of the key/value pairs in this Collection.
+
+## [.first(Amount?)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L102)
 > Obtains the first value(s) from this Collection. Starting from the end if a negative amount is provided.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -73,7 +78,7 @@ const Col = new Qulity.Collection(Iterable?);
 >
 > Returns **{Any|Collection}** A single value, or a new Collection of entries if there's an amount provided.
 
-## [.last(Amount?)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L115)
+## [.last(Amount?)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L123)
 > Obtains the last value(s) from this Collection. Starting from the beginning if a negative amount is provided.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -81,7 +86,7 @@ const Col = new Qulity.Collection(Iterable?);
 >
 > Returns **{Any|Collection}** A single value, or a new Collection of entries if there's an amount provided.
 
-## [.find(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L133)
+## [.find(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L141)
 > Searches for a specific item where the given function returns a truthy value.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -89,7 +94,32 @@ const Col = new Qulity.Collection(Iterable?);
 >
 > Returns **{Any}** Returns the value of the element found.
 
-## [.exists(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L148)
+## [.filter(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L156)
+> Identical to `Array.filter()`, but returns a Collection instead of an array.
+> | Key | Type | Description |
+> | --- | --- | --- |
+> | Fn | Function | Function used to test the iterating elements with. |
+>
+> Returns **{Collection}** Returns the new, filtered Collection.
+
+## [.sweep(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L171)
+> Removes entries that satisfy the provided filter function.
+> | Key | Type | Description |
+> | --- | --- | --- |
+> | Fn | Function | Function used to test the iterating elements with. |
+>
+> Returns **{Number}** Returns the number of deleted entries.
+
+## [.partition(Fn, Length?)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L186)
+> Partitions the Collection into two (when returning boolean values) or more Collections. If a boolean was given, the first Collection contains the items that passed the test.
+> | Key | Type | Description |
+> | --- | --- | --- |
+> | Fn | Function | Function used to test the iterating elements with. |
+> | Length? | Number | Expected length, and the length of the array of Collections to return. |
+>
+> Returns **{Array<Collection>}** An array of partitioned Collections.
+
+## [.exists(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L213)
 > Checks if there is an item that exists that passes a test.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -97,10 +127,15 @@ const Col = new Qulity.Collection(Iterable?);
 >
 > Returns **{Boolean}** Returns a boolean based on whether or not an element was found.
 
-## [.every(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L163)
+## [.every(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L228)
 > Checks whether all the elements in this Collection pass the test.
 > | Key | Type | Description |
 > | --- | --- | --- |
 > | Fn | Function | Function used to test iterating elements with. |
 >
 > Returns **{Boolean}** Returns a boolean based on whether or not all elements pass the test.
+
+## [.clone()](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L245)
+> Provides an identical, deep copy of this Collection.
+>
+> Returns **{Collection}** 
