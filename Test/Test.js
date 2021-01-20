@@ -40,6 +40,10 @@ module.exports = (Qulity, Tap) => {
     Tap("Collection find 2", Col.find((_, K) => K === "roo"), "doo");
     Tap("Collection find 3", Col.find(V => V === "none"), undefined);
 
+    Tap("Collection filter", Col.filter(V => V === "bar").toArray(), ["bar"]);
+    Tap("Collection filter 2", Col.filter((_, K) => K !== "roo").toArray(), ["bar", "new"]);
+    Tap("Collection filter 3", Col.filter(V => V === "none").toArray(), []);
+
     Tap("Collection exists", Col.exists(V => V === "bar"), true);
     Tap("Collection exists 2", Col.exists((_, K) => K === "foo"), true);
     Tap("Collection exists 3", Col.exists(V => V === "none"), false);
