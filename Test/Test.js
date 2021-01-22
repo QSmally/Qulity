@@ -63,12 +63,71 @@ module.exports = (Qulity, Tap) => {
     Tap("Collection partition 5", Col.partition(_ => 2, 4).map(C => C.toArray()), [[], [], ["doo", "bar", "new"], []]);
     Tap("Collection partition 6", Col.partition(_ => 2, 4).length, 4);
 
+    Tap("Collection reduce", Col.reduce((A, V, K) => { A.push([K, V]); return A; }, []), [["roo", "doo"], ["doo", "bar"], ["foo", "new"]]);
+    Tap("Collection reduce 2", Col.reduce((A, V) => A + V), "doobarnew");
+
+    Tap("Collection map", Col.map(V => V + " was here!"), ["doo was here!", "bar was here!", "new was here!"]);
+    Tap("Collection map 2", Col.map((V, K) => `${K}: ${V}`), ["roo: doo", "doo: bar", "foo: new"]);
+
     Tap("Collection exists", Col.exists(V => V === "bar"), true);
     Tap("Collection exists 2", Col.exists((_, K) => K === "foo"), true);
     Tap("Collection exists 3", Col.exists(V => V === "none"), false);
 
+    Tap("Collection some", Col.some(Item => Item.startsWith("b")), true);
+    Tap("Collection some 2", Col.some(Item => Item === "doo"), true);
+    Tap("Collection some 3", Col.some(Item => Item.length === 4), false);
+
     Tap("Collection every", Col.every(Item => Item.length === 3), true);
     Tap("Collection every 2", Col.every(Item => Item.length === 4), false);
     Tap("Collection every 3", Col.every(Item => Item === "doo"), false);
+
+    const Col3 = new Qulity.Collection({
+        new: "loo",
+        loo: "roo"
+    });
+
+    Tap("Collection merge", Col.merge(Col3).toPairObject(), {
+        roo: "doo",
+        doo: "bar",
+        foo: "new",
+        new: "loo",
+        loo: "roo"
+    });
+
+    Tap("Collection merge 2", Col.size, 3);
+
+    Tap("Collection implement", Col.implement(Col3).toPairObject(), {
+        roo: "doo",
+        doo: "bar",
+        foo: "new",
+        new: "loo",
+        loo: "roo"
+    });
+
+    Tap("Collection implement 2", Col.size, 5);
+
+    const Col4 = new Qulity.Collection({
+        something: "shouldn't match",
+        doo: "something else",
+        another: "also shouldn't match",
+        new: "another item"
+    });
+
+    Tap("Collection intersect", Col.intersect(Col4).toPairObject(), {
+        doo: "bar",
+        new: "loo"
+    });
+
+    Tap("Collection intersect 2", Col.size, 5);
+
+    Tap("Collection difference", Col.difference(Col4).toPairObject(), {
+        roo: "doo",
+        foo: "new",
+        loo: "roo",
+        something: "shouldn't match",
+        another: "also shouldn't match"
+    });
+
+    Tap("Collection difference 2", Col.size, 5);
 
 }
