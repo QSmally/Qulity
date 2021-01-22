@@ -135,9 +135,30 @@
             "Returns": "{Array<Collection>} An array of partitioned Collections."
         },
         {
+            "Value": "reduce",
+            "Flags": [],
+            "Line": 210,
+            "Description": "Applies a function to produce a single value.",
+            "Params": [
+                "{Function} Fn Function used to reduce, taking three arguments: 'accumulator', 'current value' and 'key'.",
+                "{*} [Initial] A starting value for the accumulator."
+            ],
+            "Returns": "{*} Returns the reduced value."
+        },
+        {
+            "Value": "map",
+            "Flags": [],
+            "Line": 237,
+            "Description": "Maps each item to another value and creates an array out of it.",
+            "Params": [
+                "{Function} Fn Function that produces an element of the new array."
+            ],
+            "Returns": "{Array<*>} Returns an array of the mapped values."
+        },
+        {
             "Value": "exists",
             "Flags": [],
-            "Line": 213,
+            "Line": 255,
             "Description": "Checks if there is an item that exists that passes a test.",
             "Params": [
                 "{Function} Fn Function used to test iterating elements with."
@@ -147,7 +168,7 @@
         {
             "Value": "every",
             "Flags": [],
-            "Line": 228,
+            "Line": 279,
             "Description": "Checks whether all the elements in this Collection pass the test.",
             "Params": [
                 "{Function} Fn Function used to test iterating elements with."
@@ -157,8 +178,78 @@
         {
             "Value": "clone",
             "Flags": [],
-            "Line": 245,
+            "Line": 296,
             "Description": "Provides an identical, deep copy of this Collection.",
+            "Returns": "{Collection}"
+        },
+        {
+            "Value": "merge",
+            "Flags": [],
+            "Line": 306,
+            "Description": "Merges this Collection with other instances into a new Collection. None of the source Collections will be modified.",
+            "Params": [
+                "{...Collection} Collections Collections to merge into one instance."
+            ],
+            "Returns": "{Collection}"
+        },
+        {
+            "Value": "implement",
+            "Flags": [],
+            "Line": 321,
+            "Description": "Shallowly merges the given Collections into this instance.",
+            "Params": [
+                " {...Collection} Collection Collections to merge into this instance."
+            ],
+            "Returns": "{Collection}"
+        },
+        {
+            "Value": "intersect",
+            "Flags": [],
+            "Line": 334,
+            "Description": "Returns a new Collection containing items where the keys are present in both original structures.",
+            "Params": [
+                "{Collection} Secondary A Collection to filter against this instance."
+            ],
+            "Returns": "{Collection}"
+        },
+        {
+            "Value": "difference",
+            "Flags": [],
+            "Line": 343,
+            "Description": "Returns a new Collection containing items where the key is present in one of the original structures, but not the other.",
+            "Params": [
+                "{Collection} Secondary A Collection to filter against this instance."
+            ],
+            "Returns": "{Collection}"
+        },
+        {
+            "Value": "tap",
+            "Flags": [],
+            "Line": 353,
+            "Description": "Passes this Collection into a function and returns the Collection itself.",
+            "Params": [
+                "{Function} Fn Function used to execute on the Collection."
+            ],
+            "Returns": "{Collection}"
+        },
+        {
+            "Value": "each",
+            "Flags": [],
+            "Line": 363,
+            "Description": "Synchronously iterates through this Collection's item and returns itself.",
+            "Params": [
+                "{Function} Fn Function to execute on each element."
+            ],
+            "Returns": "{Collection}"
+        },
+        {
+            "Value": "sort",
+            "Flags": [],
+            "Line": 374,
+            "Description": "Sorts all the items in this Collection and returns itself.",
+            "Params": [
+                "{Function} Fn Function that determines the sort order."
+            ],
             "Returns": "{Collection}"
         }
     ]
