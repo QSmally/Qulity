@@ -130,4 +130,15 @@ module.exports = (Qulity, Tap) => {
 
     Tap("Collection difference 2", Col.size, 5);
 
+    Col.tap(TheCol => {
+        Tap("Collection tap 1", TheCol.get("foo"), "new");
+        Tap("Collection tap 2", TheCol.size, 5);
+        Tap("Collection tap 3", TheCol.set("last", "item").toArray(), ["doo", "bar", "new", "loo", "roo", "item"]);
+        Tap("Collection tap 4", TheCol.size, 6);
+    })
+    .tap(TheCol => {
+        Tap("Collection tap 5", TheCol.get("last"), "item");
+        Tap("Collection tap 6", TheCol.size, 6);
+    });
+
 }
