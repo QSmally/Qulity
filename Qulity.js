@@ -14,6 +14,10 @@
 
 module.exports = {
 
-    Collection: require("./lib/Base/Collection")
+    // Base
+    Collection: require("./lib/Base/Collection"),
+
+    // Managers
+    Manager: require("./lib/Managers/BaseManager")
 
 };

@@ -7,8 +7,13 @@
 
     "Repository": "https://github.com/QSmally/Qulity/blob/master/",
 
-    "Keys": "Qulity.js",
+    "Keys": ["lib/Base/Collection", "lib/Managers/BaseManager"],
     "Typedefs": [],
 
-    "Overview": ["Collection"]
+    "Overview": {
+        "Collection": "Collection",
+
+        "#Managers": "Managers",
+        "Manager":   "BaseManager"
+    }
 }
