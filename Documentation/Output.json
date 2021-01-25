@@ -252,5 +252,27 @@
             ],
             "Returns": "{Collection}"
         }
+    ],
+    "BaseManager": [
+        {
+            "Value": "cache",
+            "Flags": [
+                "Variable",
+                "ReadOnly"
+            ],
+            "Line": 16,
+            "Description": "Cached dataset entries of this Manager.",
+            "Type": "{Collection}"
+        },
+        {
+            "Value": "holds",
+            "Flags": [
+                "Variable",
+                "Private"
+            ],
+            "Line": 31,
+            "Description": "A structure belonging to this Manager.",
+            "Type": "{Function?}"
+        }
     ]
 }

@@ -4,6 +4,9 @@
 
 * [Collection](https://github.com/QSmally/Qulity/blob/master/Documentation/Collection.md)
 
+**Managers**
+* [Manager](https://github.com/QSmally/Qulity/blob/master/Documentation/BaseManager.md)
+
 An extended JavaScript Map with additional optimisations, properties and methods.
 ```js
 const Col = new Qulity.Collection(Iterable?);
