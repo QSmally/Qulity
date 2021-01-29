@@ -23,3 +23,29 @@ class MyManager extends Qulity.Manager
 > Cached dataset entries of this Manager. [**Read Only**]
 >
 > Type **{Collection}**
+
+# Methods
+## [.add(Id, Model)](https://github.com/QSmally/Qulity/blob/master/lib/Managers/BaseManager.js#L45)
+> Inserts an instance into this Manager's cache.
+> | Key | Type | Description |
+> | --- | --- | --- |
+> | Id | String | Identifier string for the address of this model. |
+> | Model | Function, Any | A data model to add to this Manager. |
+>
+> Returns **{Manager}** 
+
+## [.remove(Id)](https://github.com/QSmally/Qulity/blob/master/lib/Managers/BaseManager.js#L60)
+> Removes an instance from this Manager's cache.
+> | Key | Type | Description |
+> | --- | --- | --- |
+> | Id | String | Identifier string of the instance. |
+>
+> Returns **{Manager}** 
+
+## [.resolve(IdOrInstance)](https://github.com/QSmally/Qulity/blob/master/lib/Managers/BaseManager.js#L73)
+> Resolves an instance of this Manager.
+> | Key | Type | Description |
+> | --- | --- | --- |
+> | IdOrInstance | String, Function, Any | Identifier to resolve from this Manager. |
+>
+> Returns **{Function|Any}** A data model resolved from this Manager's cache.
