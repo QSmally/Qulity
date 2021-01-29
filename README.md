@@ -9,6 +9,7 @@
 
 # Main Features
 * [Collections](https://github.com/QSmally/Qulity/blob/master/Documentation/Collection.md)
+* [Data Managers](https://github.com/QSmally/Qulity/blob/v1/Documentation/BaseManager.md)
 
 ## Links
 * [Documentations](https://github.com/QSmally/Qulity/blob/master/Documentation/Index.md)
@@ -28,6 +29,15 @@ const Qulity = require("qulity");
 An extended JavaScript Map with additional utility methods.
 ```js
 const Collection = new Qulity.Collection(Iterable?);
+```
+
+## [Manager](https://github.com/QSmally/Qulity/blob/v1/Documentation/BaseManager.md)
+Manages the API methods of data models and holds its cache.
+```js
+const Manager = new Qulity.Manager(Iterable?, Holds?);
+
+Manager.add("123456789012345678", new User(...Information));
+Manager.resolve("123456789012345678"); // -> User instance
 ```
 
 # Issues, Contributing & License
