@@ -141,4 +141,35 @@ module.exports = (Qulity, Tap) => {
         Tap("Collection tap 6", TheCol.size, 6);
     });
 
+
+    // BaseManager
+    class User {
+        constructor (name, age) {
+            this.name = name;
+            this.age = age;
+        }
+    }
+
+    const Man = new Qulity.Manager({}, User);
+
+    const foo = new User("foo", 20);
+    Man.add("foo", foo);
+    const bar = new User("bar", 24);
+    Man.add("bar", bar);
+    const roo = new User("roo", 29);
+    Man.add("roo", roo);
+    const doo = new User("doo", 23);
+    Man.add("doo", doo);
+
+    Tap("Manager size 1", Man.cache.size, 4);
+    Tap("Manager remove 1", Man.remove("doo"), Man);
+    Tap("Manager size 2", Man.cache.size, 3);
+
+    Tap("Manager resolve 1", Man.resolve("foo"), foo);
+    Tap("Manager resolve 2", Man.resolve("bar"), bar);
+    Tap("Manager resolve 3", Man.resolve("roo"), roo);
+    Tap("Manager resolve 4", Man.resolve("doo"), undefined);
+    
+    Tap("Manager resolve 5", Man.resolve(foo), User);
+
 }
