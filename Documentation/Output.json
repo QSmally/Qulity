@@ -305,5 +305,37 @@
             ],
             "Returns": "{Function|*} A data model resolved from this Manager's cache."
         }
+    ],
+    "DataStore": [
+        {
+            "Value": "set",
+            "Flags": [],
+            "Line": 24,
+            "Description": "Sets a model into the DataStore.",
+            "Params": [
+                "{String|Number} Key Key of the model to be inserted.",
+                "{Function|Object|DataModel} Model The data model to set into the DataStore."
+            ],
+            "Returns": "{DataStore}"
+        },
+        {
+            "Value": "resolve",
+            "Flags": [],
+            "Line": 36,
+            "Description": "Resolves a data model.",
+            "Params": [
+                "{String|Number} Key Key of the model to be resolved."
+            ],
+            "Returns": "{DataModel} Model that got resolved or cached."
+        },
+        {
+            "Value": "",
+            "Flags": [
+                "Typedef"
+            ],
+            "Line": 52,
+            "Description": "An entry of this DataStore.",
+            "Typedef": "{Function|Object} DataModel"
+        }
     ]
 }

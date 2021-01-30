@@ -5,6 +5,7 @@
 
 **Managers**
 * [Manager](https://github.com/QSmally/Qulity/blob/master/Documentation/BaseManager.md)
+* [DataStore](https://github.com/QSmally/Qulity/blob/master/Documentation/DataStore.md)
 
 Manages the API methods of data models and holds its cache.
 ```js

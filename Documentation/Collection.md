@@ -6,6 +6,7 @@
 
 **Managers**
 * [Manager](https://github.com/QSmally/Qulity/blob/master/Documentation/BaseManager.md)
+* [DataStore](https://github.com/QSmally/Qulity/blob/master/Documentation/DataStore.md)
 
 An extended JavaScript Map with additional optimisations, properties and methods.
 ```js
