@@ -18,6 +18,7 @@ module.exports = {
     Collection: require("./lib/Base/Collection"),
 
     // Managers
-    Manager: require("./lib/Managers/BaseManager")
+    Manager:   require("./lib/Managers/BaseManager"),
+    DataStore: require("./lib/Managers/DataStore")
 
 };
