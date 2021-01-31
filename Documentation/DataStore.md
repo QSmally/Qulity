@@ -1,5 +1,6 @@
 
 # DataStore
+### Extends **{Collection}**
 
 * [Collection](https://github.com/QSmally/Qulity/blob/master/Documentation/Collection.md)
 
@@ -9,7 +10,7 @@
 
 Base class that manages the creation, retrieval and deletion of a specific data model.
 ```js
-class MyManager extends Qulity.Manager
+const DS = new Qulity.DataStore(Iterable?);
 ```
 
 | Key | Type | Description |
@@ -19,7 +20,7 @@ class MyManager extends Qulity.Manager
 
 
 # Methods
-## [.set(Key, Model)](https://github.com/QSmally/Qulity/blob/master/lib/Managers/DataStore.js#L24)
+## [.set(Key, Model)](https://github.com/QSmally/Qulity/blob/master/lib/Managers/DataStore.js#L25)
 > Sets a model into the DataStore.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -28,7 +29,7 @@ class MyManager extends Qulity.Manager
 >
 > Returns **{DataStore}** 
 
-## [.resolve(Key)](https://github.com/QSmally/Qulity/blob/master/lib/Managers/DataStore.js#L36)
+## [.resolve(Key)](https://github.com/QSmally/Qulity/blob/master/lib/Managers/DataStore.js#L37)
 > Resolves a data model.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -37,7 +38,7 @@ class MyManager extends Qulity.Manager
 > Returns **{DataModel}** Model that got resolved or cached.
 
 # Typedefs
-## [DataModel](https://github.com/QSmally/Qulity/blob/master/lib/Managers/DataStore.js#L52)
+## [DataModel](https://github.com/QSmally/Qulity/blob/master/lib/Managers/DataStore.js#L53)
 > An entry of this DataStore.
 >
 > Type **{Function|Object}**

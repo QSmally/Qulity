@@ -310,7 +310,7 @@
         {
             "Value": "set",
             "Flags": [],
-            "Line": 24,
+            "Line": 25,
             "Description": "Sets a model into the DataStore.",
             "Params": [
                 "{String|Number} Key Key of the model to be inserted.",
@@ -321,7 +321,7 @@
         {
             "Value": "resolve",
             "Flags": [],
-            "Line": 36,
+            "Line": 37,
             "Description": "Resolves a data model.",
             "Params": [
                 "{String|Number} Key Key of the model to be resolved."
@@ -333,7 +333,7 @@
             "Flags": [
                 "Typedef"
             ],
-            "Line": 52,
+            "Line": 53,
             "Description": "An entry of this DataStore.",
             "Typedef": "{Function|Object} DataModel"
         }
