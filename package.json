@@ -9,9 +9,6 @@
     "benchmark": "node Test/Benchmark.js",
     "docs": "gendocs Test/DocConf.json"
   },
-  "engines": {
-    "node": ">=14.0.0"
-  },
   "keywords": [
     "data",
     "management",
