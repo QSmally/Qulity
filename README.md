@@ -9,7 +9,8 @@
 
 # Main Features
 * [Collections](https://github.com/QSmally/Qulity/blob/master/Documentation/Collection.md)
-* [Data Managers](https://github.com/QSmally/Qulity/blob/v1/Documentation/BaseManager.md)
+* [Managers](https://github.com/QSmally/Qulity/blob/v1/Documentation/BaseManager.md)
+* [DataStores](https://github.com/QSmally/Qulity/blob/v1/Documentation/DataStore.md)
 
 ## Links
 * [Documentations](https://github.com/QSmally/Qulity/blob/master/Documentation/Index.md)
