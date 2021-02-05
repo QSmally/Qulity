@@ -15,8 +15,7 @@
     "utility",
     "backend",
     "datastore",
-    "optimisations",
-    "QDB"
+    "optimisations"
   ],
   "homepage": "https://github.com/QSmally/Qulity#readme",
   "repository": "github:QSmally/Qulity",
