@@ -21,7 +21,7 @@ const DS = new Qulity.DataStore(Iterable?);
 
 # Methods
 ## [.set(Key, Model)](https://github.com/QSmally/Qulity/blob/master/lib/Managers/DataStore.js#L25)
-> Sets a model into the DataStore.
+> Inserts or updates a model.
 > | Key | Type | Description |
 > | --- | --- | --- |
 > | Key | String, Number | Key of the model to be inserted. |
@@ -38,7 +38,7 @@ const DS = new Qulity.DataStore(Iterable?);
 > Returns **{DataModel}** Model that got resolved or cached.
 
 # Typedefs
-## [DataModel](https://github.com/QSmally/Qulity/blob/master/lib/Managers/DataStore.js#L53)
+## [DataModel](https://github.com/QSmally/Qulity/blob/master/lib/Managers/DataStore.js#L52)
 > An entry of this DataStore.
 >
 > Type **{Function|Object}**

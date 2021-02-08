@@ -311,7 +311,7 @@
             "Value": "set",
             "Flags": [],
             "Line": 25,
-            "Description": "Sets a model into the DataStore.",
+            "Description": "Inserts or updates a model.",
             "Params": [
                 "{String|Number} Key Key of the model to be inserted.",
                 "{Function|Object|DataModel} Model The data model to set into the DataStore."
@@ -333,7 +333,7 @@
             "Flags": [
                 "Typedef"
             ],
-            "Line": 53,
+            "Line": 52,
             "Description": "An entry of this DataStore.",
             "Typedef": "{Function|Object} DataModel"
         }
