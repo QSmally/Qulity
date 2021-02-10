@@ -172,4 +172,17 @@ module.exports = (Qulity, Tap) => {
     
     Tap("Manager resolve 5", Man.resolve(foo), User);
 
+
+    // DataStore
+    const DS = new Qulity.DataStore();
+
+    Tap("DataStore set 1", DS.set("foo", {value: "bar"}), DS);
+    Tap("DataStore set 2", DS.set(4, {value: "doo"}), DS);
+    Tap("DataStore set 3", DS.set(() => {}, {value: "bar"}), null);
+    Tap("DataStore set 4", DS.set("foo", "bar"), null);
+    Tap("DataStore set 3", DS.set("bar", 32), null);
+
+    Tap("DataStore resolve 1", DS.resolve("foo"), {value: "bar"});
+    Tap("DataStore resolve 2", DS.resolve(4), {value: "doo"});
+
 }
