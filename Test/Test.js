@@ -185,4 +185,19 @@ module.exports = (Qulity, Tap) => {
     Tap("DataStore resolve 1", DS.resolve("foo"), {value: "bar"});
     Tap("DataStore resolve 2", DS.resolve(4), {value: "doo"});
 
+
+    // Cache
+    const CC = new Qulity.Cache();
+
+    Tap("Cache set 1", CC.set("1", "2"), CC);
+    Tap("Cache set 2", CC.set("2", "3"), CC);
+    Tap("Cache set 3", CC.set("3", "4"), CC);
+
+    Tap("Cache default 1", CC.default("1", "5"), false);
+    Tap("Cache default 2", CC.get("1"), "2");
+    Tap("Cache default 3", CC.default("3", "10"), false);
+    Tap("Cache default 4", CC.get("3"), "4");
+    Tap("Cache default 3", CC.default("5", "15"), true);
+    Tap("Cache default 4", CC.get("5"), "15");
+
 }
