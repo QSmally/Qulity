@@ -253,6 +253,19 @@
             "Returns": "{Collection}"
         }
     ],
+    "Cache": [
+        {
+            "Value": "default",
+            "Flags": [],
+            "Line": 25,
+            "Description": "Ensures a key being in the Collection.",
+            "Params": [
+                "{*} Key Specifies the address for the value.",
+                "{*} Value A value to be conditionally inserted."
+            ],
+            "Returns": "{Boolean} Whether or not a new value was inserted."
+        }
+    ],
     "BaseManager": [
         {
             "Value": "cache",

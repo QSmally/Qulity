@@ -4,6 +4,9 @@
 
 * [Collection](https://github.com/QSmally/Qulity/blob/master/Documentation/Collection.md)
 
+**Extensions**
+* [BaseCache](https://github.com/QSmally/Qulity/blob/master/Documentation/Cache.md)
+
 **Managers**
 * [Manager](https://github.com/QSmally/Qulity/blob/master/Documentation/BaseManager.md)
 * [DataStore](https://github.com/QSmally/Qulity/blob/master/Documentation/DataStore.md)
