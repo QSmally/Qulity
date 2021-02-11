@@ -28,6 +28,11 @@ class MyManager extends Qulity.Manager
 >
 > Type **{Collection}**
 
+## [.holds](https://github.com/QSmally/Qulity/blob/master/lib/Managers/BaseManager.js#L31)
+> A structure belonging to this Manager. [**Read Only**]
+>
+> Type **{Function?}**
+
 # Methods
 ## [.add(Id, Model)](https://github.com/QSmally/Qulity/blob/master/lib/Managers/BaseManager.js#L45)
 > Inserts an instance into this Manager's cache.

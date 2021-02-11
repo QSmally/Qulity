@@ -281,7 +281,7 @@
             "Value": "holds",
             "Flags": [
                 "Variable",
-                "Private"
+                "ReadOnly"
             ],
             "Line": 31,
             "Description": "A structure belonging to this Manager.",
