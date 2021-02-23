@@ -197,7 +197,7 @@ module.exports = (Qulity, Tap) => {
     Tap("Cache default 2", CC.get("1"), "2");
     Tap("Cache default 3", CC.default("3", "10"), false);
     Tap("Cache default 4", CC.get("3"), "4");
-    Tap("Cache default 3", CC.default("5", "15"), true);
-    Tap("Cache default 4", CC.get("5"), "15");
+    Tap("Cache default 5", CC.default("5", "15"), true);
+    Tap("Cache default 6", CC.get("5"), "15");
 
 }
