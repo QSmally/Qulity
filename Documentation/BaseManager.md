@@ -5,6 +5,7 @@
 
 **Extensions**
 * [BaseCache](https://github.com/QSmally/Qulity/blob/master/Documentation/Cache.md)
+* [ActiveCache](https://github.com/QSmally/Qulity/blob/master/Documentation/ActiveCache.md)
 
 **Managers**
 * [Manager](https://github.com/QSmally/Qulity/blob/master/Documentation/BaseManager.md)
@@ -18,23 +19,23 @@ class MyManager extends Qulity.Manager
 | Key | Type | Description |
 | --- | --- | --- |
 | Iterable? | Array, Object | Optional initial values of this Manager. |
-| Holds? | Function | An optional data stricture belonging to this Manager. |
+| Holds? | Function | An optional data stricture belonging to this Manager. @implements Collection |
 
 
 
 # Values
-## [.cache](https://github.com/QSmally/Qulity/blob/master/lib/Managers/BaseManager.js#L16)
+## [.cache](https://github.com/QSmally/Qulity/blob/master/lib/Managers/BaseManager.js#L17)
 > Cached dataset entries of this Manager. [**Read Only**]
 >
 > Type **{Collection}**
 
-## [.holds](https://github.com/QSmally/Qulity/blob/master/lib/Managers/BaseManager.js#L31)
+## [.holds](https://github.com/QSmally/Qulity/blob/master/lib/Managers/BaseManager.js#L32)
 > A structure belonging to this Manager. [**Read Only**]
 >
 > Type **{Function?}**
 
 # Methods
-## [.add(Id, Model)](https://github.com/QSmally/Qulity/blob/master/lib/Managers/BaseManager.js#L45)
+## [.add(Id, Model)](https://github.com/QSmally/Qulity/blob/master/lib/Managers/BaseManager.js#L46)
 > Inserts an instance into this Manager's cache.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -43,7 +44,7 @@ class MyManager extends Qulity.Manager
 >
 > Returns **{Manager}** 
 
-## [.remove(Id)](https://github.com/QSmally/Qulity/blob/master/lib/Managers/BaseManager.js#L60)
+## [.remove(Id)](https://github.com/QSmally/Qulity/blob/master/lib/Managers/BaseManager.js#L61)
 > Removes an instance from this Manager's cache.
 > | Key | Type | Description |
 > | --- | --- | --- |
@@ -51,7 +52,7 @@ class MyManager extends Qulity.Manager
 >
 > Returns **{Manager}** 
 
-## [.resolve(IdOrInstance)](https://github.com/QSmally/Qulity/blob/master/lib/Managers/BaseManager.js#L73)
+## [.resolve(IdOrInstance)](https://github.com/QSmally/Qulity/blob/master/lib/Managers/BaseManager.js#L74)
 > Resolves an instance of this Manager.
 > | Key | Type | Description |
 > | --- | --- | --- |

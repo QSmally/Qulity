@@ -258,12 +258,48 @@
             "Value": "default",
             "Flags": [],
             "Line": 25,
-            "Description": "Ensures a key being in the Collection.",
+            "Description": "Ensures an entry being in this Cache map.",
             "Params": [
                 "{*} Key Specifies the address for the value.",
                 "{*} Value A value to be conditionally inserted."
             ],
             "Returns": "{Boolean} Whether or not a new value was inserted."
+        }
+    ],
+    "ActiveCache": [
+        {
+            "Value": "_eventEmitter",
+            "Flags": [
+                "Variable",
+                "Private"
+            ],
+            "Line": 23,
+            "Description": "An event manager for this ActiveCache.",
+            "Type": "{EventEmitter}"
+        },
+        {
+            "Value": "on",
+            "Flags": [],
+            "Line": 35,
+            "Description": "Registers a handler for this ActiveCache.",
+            "Params": [
+                "{Event} Event An event to handle.",
+                "{Function} Handler A handler for this registered event."
+            ],
+            "Returns": "{ActiveCache}"
+        },
+        {
+            "Value": "",
+            "Flags": [
+                "Typedef"
+            ],
+            "Line": 64,
+            "Description": "Current types of events. ",
+            "Typedef": "{String} Event",
+            "Params": [
+                "{String} set",
+                "{String} delete"
+            ]
         }
     ],
     "BaseManager": [
@@ -273,7 +309,7 @@
                 "Variable",
                 "ReadOnly"
             ],
-            "Line": 16,
+            "Line": 17,
             "Description": "Cached dataset entries of this Manager.",
             "Type": "{Collection}"
         },
@@ -283,14 +319,14 @@
                 "Variable",
                 "ReadOnly"
             ],
-            "Line": 31,
+            "Line": 32,
             "Description": "A structure belonging to this Manager.",
             "Type": "{Function?}"
         },
         {
             "Value": "add",
             "Flags": [],
-            "Line": 45,
+            "Line": 46,
             "Description": "Inserts an instance into this Manager's cache.",
             "Params": [
                 "{String} Id Identifier string for the address of this model.",
@@ -301,7 +337,7 @@
         {
             "Value": "remove",
             "Flags": [],
-            "Line": 60,
+            "Line": 61,
             "Description": "Removes an instance from this Manager's cache.",
             "Params": [
                 "{String} Id Identifier string of the instance."
@@ -311,7 +347,7 @@
         {
             "Value": "resolve",
             "Flags": [],
-            "Line": 73,
+            "Line": 74,
             "Description": "Resolves an instance of this Manager.",
             "Params": [
                 "{String|Function|*} IdOrInstance Identifier to resolve from this Manager."

@@ -6,6 +6,7 @@
 
 **Extensions**
 * [BaseCache](https://github.com/QSmally/Qulity/blob/master/Documentation/Cache.md)
+* [ActiveCache](https://github.com/QSmally/Qulity/blob/master/Documentation/ActiveCache.md)
 
 **Managers**
 * [Manager](https://github.com/QSmally/Qulity/blob/master/Documentation/BaseManager.md)
