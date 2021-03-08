@@ -7,7 +7,7 @@
 
     "Repository": "https://github.com/QSmally/Qulity/blob/master/",
 
-    "Keys": ["lib/Base/Collection", "lib/Extensions/Cache", "lib/Managers/BaseManager", "lib/Managers/DataStore"],
+    "Keys": ["lib/Base/Collection", "lib/Extensions/Cache", "lib/Extensions/ActiveCache", "lib/Managers/BaseManager", "lib/Managers/DataStore"],
     "Typedefs": [],
 
     "Overview": {
@@ -15,6 +15,7 @@
 
         "#Extensions": "Extensions",
         "BaseCache":   "Cache",
+        "ActiveCache": "ActiveCache",
 
         "#Managers": "Managers",
         "Manager":   "BaseManager",
