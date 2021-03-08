@@ -18,7 +18,8 @@ module.exports = {
     Collection: require("./lib/Base/Collection"),
 
     // Extensions
-    Cache: require("./lib/Extensions/Cache"),
+    Cache:       require("./lib/Extensions/Cache"),
+    ActiveCache: require("./lib/Extensions/ActiveCache"),
 
     // Managers
     Manager:   require("./lib/Managers/BaseManager"),
