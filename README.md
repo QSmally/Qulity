@@ -6,8 +6,8 @@
 
 # Features
 * [Collections](https://github.com/QSmally/Qulity/blob/master/Documentation/Collection.md)
-* [Managers](https://github.com/QSmally/Qulity/blob/v1/Documentation/BaseManager.md)
-* [DataStores](https://github.com/QSmally/Qulity/blob/v1/Documentation/DataStore.md)
+* [Managers](https://github.com/QSmally/Qulity/blob/master/Documentation/BaseManager.md)
+* [DataStores](https://github.com/QSmally/Qulity/blob/master/Documentation/DataStore.md)
 
 ## Links
 * [Documentations](https://github.com/QSmally/Qulity/blob/master/Documentation/Index.md)
@@ -23,19 +23,19 @@ const Qulity = require("qulity");
 
 # Usage
 
-## [Collection](https://github.com/QSmally/Qulity/blob/v1/Documentation/Collection.md)
+## [Collection](https://github.com/QSmally/Qulity/blob/master/Documentation/Collection.md)
 An extended JavaScript Map with additional utility methods.
 ```js
-const Collection = new Qulity.Collection(Iterable?);
+const collection = new Qulity.Collection(iterable?);
 ```
 
-## [Manager](https://github.com/QSmally/Qulity/blob/v1/Documentation/BaseManager.md)
+## [Manager](https://github.com/QSmally/Qulity/blob/master/Documentation/BaseManager.md)
 Manages the API methods of data models and holds its cache.
 ```js
-const Manager = new Qulity.Manager(Iterable?, Holds?);
+const manager = new Qulity.Manager(iterable?, holds?);
 
-Manager.add("123456789012345678", new User(...Information));
-Manager.resolve("123456789012345678"); // -> User instance
+manager.add("123456789012345678", new User(...information));
+manager.resolve("123456789012345678"); // -> User instance
 ```
 
 
