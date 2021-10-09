@@ -73,13 +73,13 @@ module.exports = (Qulity, Tap) => {
     Tap("Collection exists 2", Col.exists((_, K) => K === "foo"), true);
     Tap("Collection exists 3", Col.exists(V => V === "none"), false);
 
-    Tap("Collection some", Col.some(Item => Item.startsWith("b")), true);
-    Tap("Collection some 2", Col.some(Item => Item === "doo"), true);
-    Tap("Collection some 3", Col.some(Item => Item.length === 4), false);
+    Tap("Collection some", Col.someSatisfy(Item => Item.startsWith("b")), true);
+    Tap("Collection some 2", Col.someSatisfy(Item => Item === "doo"), true);
+    Tap("Collection some 3", Col.someSatisfy(Item => Item.length === 4), false);
 
-    Tap("Collection every", Col.every(Item => Item.length === 3), true);
-    Tap("Collection every 2", Col.every(Item => Item.length === 4), false);
-    Tap("Collection every 3", Col.every(Item => Item === "doo"), false);
+    Tap("Collection every", Col.everySatisfy(Item => Item.length === 3), true);
+    Tap("Collection every 2", Col.everySatisfy(Item => Item.length === 4), false);
+    Tap("Collection every 3", Col.everySatisfy(Item => Item === "doo"), false);
 
     const Col3 = new Qulity.Collection({
         new: "loo",
