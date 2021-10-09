@@ -19,204 +19,212 @@ const Col = new Qulity.Collection(Iterable?);
 
 | Key | Type | Description |
 | --- | --- | --- |
-| Iterable? | Array, Object | Optional initial values of this Collection. |
+| iterable? | Array, Object | Optional initial values of this Collection. |
 
 
 
 # Values
-## [.size](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L23)
+## [.size](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L22)
 > Amount of key/value pairs in this Collection.
 >
 > Type **{Number}**
 
 # Methods
-## [.set(Key, Value)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L33)
+## [.set(keyContext, value)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L33)
 > Main interaction point of this Collection.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | Key | Any | Specifies an address for this value. |
-> | Value | Any | A value to be inserted at the key of this document. |
+> | keyContext | Any | Specifies an address for this value. |
+> | value | Any | A value to be inserted at the key of this document. |
 >
 > Returns **{Collection}** 
 
-## [.delete(Key)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L44)
+## [.delete(keyContext)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L44)
 > Main interaction point of this Collection.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | Key | Any | Specifies a key to erase from this Collection. |
+> | keyContext | Any | Specifies a key to erase from this Collection. |
 >
 > Returns **{Collection}** 
 
-## [.get(Key)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L54)
+## [.get(keyContext)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L54)
 > Main interaction point of this Collection.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | Key | Any | Specifies a key to fetch from this Collection. |
+> | keyContext | Any | Specifies a key to fetch from this Collection. |
 >
 > Returns **{Any}** If found, the element at the address of the key.
 
-## [.has(Key)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L63)
+## [.has(keyContext)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L63)
 > Main interaction point of this Collection.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | Key | Any | Specifies a key to see if it exists. |
+> | keyContext | Any | Specifies a key to see if it exists. |
 >
 > Returns **{Boolean}** A boolean value to indicate whether this element exists.
 
-## [.toArray()](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L75)
+## [.toArray()](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L74)
 > Creates an ordered array of the values of this Collection.
 >
 > Returns **{Array}** Array of values in this Collection.
 
-## [.toKeyArray()](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L83)
+## [.toKeyArray()](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L82)
 > Creates an ordered array of the keys of this Collection.
 >
 > Returns **{Array}** Array of keys in this Collection.
 
-## [.toPairObject()](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L91)
+## [.toPairObject()](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L90)
 > Creates an ordered object of all the entries of this Collection.
 >
 > Returns **{Object}** Object of the key/value pairs in this Collection.
 
-## [.first(Amount?)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L102)
+## [.first(amount?)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L100)
 > Obtains the first value(s) from this Collection. Starting from the end if a negative amount is provided.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | Amount? | Number | Amount of values to obtain from the beginning. |
+> | amount? | Number | Amount of values to obtain from the beginning. |
 >
 > Returns **{Any|Collection}** A single value, or a new Collection of entries if there's an amount provided.
 
-## [.last(Amount?)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L123)
+## [.last(amount?)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L118)
 > Obtains the last value(s) from this Collection. Starting from the beginning if a negative amount is provided.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | Amount? | Number | Amount of values to obtain from the end. |
+> | amount? | Number | Amount of values to obtain from the end. |
 >
 > Returns **{Any|Collection}** A single value, or a new Collection of entries if there's an amount provided.
 
-## [.find(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L141)
+## [.find(predicate)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L132)
 > Searches for a specific item where the given function returns a truthy value.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | Fn | Function | Function used to test iterating elements with. |
+> | predicate | Function | Function used to test iterating elements with. |
 >
 > Returns **{Any}** Returns the value of the element found.
 
-## [.filter(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L156)
+## [.filter(predicate)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L143)
 > Identical to `Array.filter()`, but returns a Collection instead of an array.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | Fn | Function | Function used to test the iterating elements with. |
+> | predicate | Function | Function used to test the iterating elements with. |
 >
 > Returns **{Collection}** Returns the new, filtered Collection.
 
-## [.sweep(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L171)
+## [.sweep(predicate)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L155)
 > Removes entries that satisfy the provided filter function.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | Fn | Function | Function used to test the iterating elements with. |
+> | predicate | Function | Function used to test the iterating elements with. |
 >
 > Returns **{Number}** Returns the number of deleted entries.
 
-## [.partition(Fn, Length?)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L186)
+## [.partition(predicate, lengthExpected?)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L167)
 > Partitions the Collection into two (when returning boolean values) or more Collections. If a boolean was given, the first Collection contains the items that passed the test.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | Fn | Function | Function used to test the iterating elements with. |
-> | Length? | Number | Expected length, and the length of the array of Collections to return. |
+> | predicate | Function | Function used to test the iterating elements with. |
+> | lengthExpected? | Number | Expected length, and the length of the array of Collections to return. |
 >
 > Returns **{Array<Collection>}** An array of partitioned Collections.
 
-## [.reduce(Fn, Initial?)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L210)
+## [.reduce(transformer, initialAccumulatorContext?)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L193)
 > Applies a function to produce a single value.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | Fn | Function | Function used to reduce, taking three arguments: 'accumulator', 'current value' and 'key'. |
-> | Initial? | Any | A starting value for the accumulator. |
+> | transformer | Function | Function used to reduce, taking three arguments: 'accumulator', 'current value' and 'key'. |
+> | initialAccumulatorContext? | Any | A starting value for the accumulator. |
 >
 > Returns **{Any}** Returns the reduced value.
 
-## [.map(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L237)
+## [.map(transformer)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L220)
 > Maps each item to another value and creates an array out of it.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | Fn | Function | Function that produces an element of the new array. |
+> | transformer | Function | Function that produces an element of the new array. |
 >
 > Returns **{Array<Any>}** Returns an array of the mapped values.
 
-## [.exists(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L255)
+## [.exists(predicate)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L239)
 > Checks if there is an item that exists that passes a test.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | Fn | Function | Function used to test iterating elements with. |
+> | predicate | Function | Function used to test iterating elements with. |
 >
 > Returns **{Boolean}** Returns a boolean based on whether or not an element was found.
 
-## [.every(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L279)
+## [.someSatisfy(predicate)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L251)
+> Checks whether at least one item satisfies the test.
+> | Key | Type | Description |
+> | --- | --- | --- |
+> | predicate | Function | Function used to test iteration elements with. |
+>
+> Returns **{Boolean}** Returns a boolean based on whether or not some element passed.
+
+## [.every(predicate)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L262)
 > Checks whether all the elements in this Collection pass the test.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | Fn | Function | Function used to test iterating elements with. |
+> | predicate | Function | Function used to test iterating elements with. |
 >
 > Returns **{Boolean}** Returns a boolean based on whether or not all elements pass the test.
 
-## [.clone()](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L296)
+## [.clone()](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L275)
 > Provides an identical, deep copy of this Collection.
 >
 > Returns **{Collection}** 
 
-## [.merge(Collections)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L306)
+## [.merge(collections)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L285)
 > Merges this Collection with other instances into a new Collection. None of the source Collections will be modified.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | Collections | ...Collection | Collections to merge into one instance. |
+> | collections | ...Collection | Collections to merge into one instance. |
 >
 > Returns **{Collection}** 
 
-## [.implement(Collection)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L321)
+## [.implement(collections)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L298)
 > Shallowly merges the given Collections into this instance.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | Collection |  ...Collection | Collections to merge into this instance. |
+> | collections | ...Collection | Collections to merge into this instance. |
 >
 > Returns **{Collection}** 
 
-## [.intersect(Secondary)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L334)
+## [.intersect(secondary)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L310)
 > Returns a new Collection containing items where the keys are present in both original structures.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | Secondary | Collection | A Collection to filter against this instance. |
+> | secondary | Collection | A Collection to filter against this instance. |
 >
 > Returns **{Collection}** 
 
-## [.difference(Secondary)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L343)
+## [.difference(secondary)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L319)
 > Returns a new Collection containing items where the key is present in one of the original structures, but not the other.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | Secondary | Collection | A Collection to filter against this instance. |
+> | secondary | Collection | A Collection to filter against this instance. |
 >
 > Returns **{Collection}** 
 
-## [.tap(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L353)
+## [.tap(indenter)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L331)
 > Passes this Collection into a function and returns the Collection itself.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | Fn | Function | Function used to execute on the Collection. |
+> | indenter | Function | Function used to execute on the Collection. |
 >
 > Returns **{Collection}** 
 
-## [.each(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L363)
+## [.each(iterator)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L341)
 > Synchronously iterates through this Collection's item and returns itself.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | Fn | Function | Function to execute on each element. |
+> | iterator | Function | Function to execute on each element. |
 >
 > Returns **{Collection}** 
 
-## [.sort(Fn)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L374)
+## [.sort(orderer)](https://github.com/QSmally/Qulity/blob/master/lib/Base/Collection.js#L352)
 > Sorts all the items in this Collection and returns itself.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | Fn | Function | Function that determines the sort order. |
+> | orderer | Function | Function that determines the sort order. |
 >
 > Returns **{Collection}** 

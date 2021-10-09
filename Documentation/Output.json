@@ -5,7 +5,7 @@
             "Flags": [
                 "Variable"
             ],
-            "Line": 23,
+            "Line": 22,
             "Description": "Amount of key/value pairs in this Collection.",
             "Action": "Getter",
             "Refer": "size",
@@ -17,8 +17,8 @@
             "Line": 33,
             "Description": "Main interaction point of this Collection.",
             "Params": [
-                "{*} Key Specifies an address for this value.",
-                "{*} Value A value to be inserted at the key of this document."
+                "{*} keyContext Specifies an address for this value.",
+                "{*} value A value to be inserted at the key of this document."
             ],
             "Returns": "{Collection}"
         },
@@ -28,7 +28,7 @@
             "Line": 44,
             "Description": "Main interaction point of this Collection.",
             "Params": [
-                "{*} Key Specifies a key to erase from this Collection."
+                "{*} keyContext Specifies a key to erase from this Collection."
             ],
             "Returns": "{Collection}"
         },
@@ -38,7 +38,7 @@
             "Line": 54,
             "Description": "Main interaction point of this Collection.",
             "Params": [
-                "{*} Key Specifies a key to fetch from this Collection."
+                "{*} keyContext Specifies a key to fetch from this Collection."
             ],
             "Returns": "{*} If found, the element at the address of the key."
         },
@@ -48,207 +48,217 @@
             "Line": 63,
             "Description": "Main interaction point of this Collection.",
             "Params": [
-                "{*} Key Specifies a key to see if it exists."
+                "{*} keyContext Specifies a key to see if it exists."
             ],
             "Returns": "{Boolean} A boolean value to indicate whether this element exists."
         },
         {
             "Value": "toArray",
             "Flags": [],
-            "Line": 75,
+            "Line": 74,
             "Description": "Creates an ordered array of the values of this Collection.",
             "Returns": "{Array} Array of values in this Collection."
         },
         {
             "Value": "toKeyArray",
             "Flags": [],
-            "Line": 83,
+            "Line": 82,
             "Description": "Creates an ordered array of the keys of this Collection.",
             "Returns": "{Array} Array of keys in this Collection."
         },
         {
             "Value": "toPairObject",
             "Flags": [],
-            "Line": 91,
+            "Line": 90,
             "Description": "Creates an ordered object of all the entries of this Collection.",
             "Returns": "{Object} Object of the key/value pairs in this Collection."
         },
         {
             "Value": "first",
             "Flags": [],
-            "Line": 102,
+            "Line": 100,
             "Description": "Obtains the first value(s) from this Collection. Starting from the end if a negative amount is provided.",
             "Params": [
-                "{Number} [Amount] Amount of values to obtain from the beginning."
+                "{Number} [amount] Amount of values to obtain from the beginning."
             ],
             "Returns": "{*|Collection} A single value, or a new Collection of entries if there's an amount provided."
         },
         {
             "Value": "last",
             "Flags": [],
-            "Line": 123,
+            "Line": 118,
             "Description": "Obtains the last value(s) from this Collection. Starting from the beginning if a negative amount is provided.",
             "Params": [
-                "{Number} [Amount] Amount of values to obtain from the end."
+                "{Number} [amount] Amount of values to obtain from the end."
             ],
             "Returns": "{*|Collection} A single value, or a new Collection of entries if there's an amount provided."
         },
         {
             "Value": "find",
             "Flags": [],
-            "Line": 141,
+            "Line": 132,
             "Description": "Searches for a specific item where the given function returns a truthy value.",
             "Params": [
-                "{Function} Fn Function used to test iterating elements with."
+                "{Function} predicate Function used to test iterating elements with."
             ],
             "Returns": "{*} Returns the value of the element found."
         },
         {
             "Value": "filter",
             "Flags": [],
-            "Line": 156,
+            "Line": 143,
             "Description": "Identical to `Array.filter()`, but returns a Collection instead of an array.",
             "Params": [
-                "{Function} Fn Function used to test the iterating elements with."
+                "{Function} predicate Function used to test the iterating elements with."
             ],
             "Returns": "{Collection} Returns the new, filtered Collection."
         },
         {
             "Value": "sweep",
             "Flags": [],
-            "Line": 171,
+            "Line": 155,
             "Description": "Removes entries that satisfy the provided filter function.",
             "Params": [
-                "{Function} Fn Function used to test the iterating elements with."
+                "{Function} predicate Function used to test the iterating elements with."
             ],
             "Returns": "{Number} Returns the number of deleted entries."
         },
         {
             "Value": "partition",
             "Flags": [],
-            "Line": 186,
+            "Line": 167,
             "Description": "Partitions the Collection into two (when returning boolean values) or more Collections. If a boolean was given, the first Collection contains the items that passed the test.",
             "Params": [
-                "{Function} Fn Function used to test the iterating elements with.",
-                "{Number} [Length] Expected length, and the length of the array of Collections to return."
+                "{Function} predicate Function used to test the iterating elements with.",
+                "{Number} [lengthExpected] Expected length, and the length of the array of Collections to return."
             ],
             "Returns": "{Array<Collection>} An array of partitioned Collections."
         },
         {
             "Value": "reduce",
             "Flags": [],
-            "Line": 210,
+            "Line": 193,
             "Description": "Applies a function to produce a single value.",
             "Params": [
-                "{Function} Fn Function used to reduce, taking three arguments: 'accumulator', 'current value' and 'key'.",
-                "{*} [Initial] A starting value for the accumulator."
+                "{Function} transformer Function used to reduce, taking three arguments: 'accumulator', 'current value' and 'key'.",
+                "{*} [initialAccumulatorContext] A starting value for the accumulator."
             ],
             "Returns": "{*} Returns the reduced value."
         },
         {
             "Value": "map",
             "Flags": [],
-            "Line": 237,
+            "Line": 220,
             "Description": "Maps each item to another value and creates an array out of it.",
             "Params": [
-                "{Function} Fn Function that produces an element of the new array."
+                "{Function} transformer Function that produces an element of the new array."
             ],
             "Returns": "{Array<*>} Returns an array of the mapped values."
         },
         {
             "Value": "exists",
             "Flags": [],
-            "Line": 255,
+            "Line": 239,
             "Description": "Checks if there is an item that exists that passes a test.",
             "Params": [
-                "{Function} Fn Function used to test iterating elements with."
+                "{Function} predicate Function used to test iterating elements with."
             ],
             "Returns": "{Boolean} Returns a boolean based on whether or not an element was found."
         },
         {
+            "Value": "someSatisfy",
+            "Flags": [],
+            "Line": 251,
+            "Description": "Checks whether at least one item satisfies the test.",
+            "Params": [
+                "{Function} predicate Function used to test iteration elements with."
+            ],
+            "Returns": "{Boolean} Returns a boolean based on whether or not some element passed."
+        },
+        {
             "Value": "every",
             "Flags": [],
-            "Line": 279,
+            "Line": 262,
             "Description": "Checks whether all the elements in this Collection pass the test.",
             "Params": [
-                "{Function} Fn Function used to test iterating elements with."
+                "{Function} predicate Function used to test iterating elements with."
             ],
             "Returns": "{Boolean} Returns a boolean based on whether or not all elements pass the test."
         },
         {
             "Value": "clone",
             "Flags": [],
-            "Line": 296,
+            "Line": 275,
             "Description": "Provides an identical, deep copy of this Collection.",
             "Returns": "{Collection}"
         },
         {
             "Value": "merge",
             "Flags": [],
-            "Line": 306,
+            "Line": 285,
             "Description": "Merges this Collection with other instances into a new Collection. None of the source Collections will be modified.",
             "Params": [
-                "{...Collection} Collections Collections to merge into one instance."
+                "{...Collection} collections Collections to merge into one instance."
             ],
             "Returns": "{Collection}"
         },
         {
             "Value": "implement",
             "Flags": [],
-            "Line": 321,
+            "Line": 298,
             "Description": "Shallowly merges the given Collections into this instance.",
             "Params": [
-                " {...Collection} Collection Collections to merge into this instance."
+                "{...Collection} collections Collections to merge into this instance."
             ],
             "Returns": "{Collection}"
         },
         {
             "Value": "intersect",
             "Flags": [],
-            "Line": 334,
+            "Line": 310,
             "Description": "Returns a new Collection containing items where the keys are present in both original structures.",
             "Params": [
-                "{Collection} Secondary A Collection to filter against this instance."
+                "{Collection} secondary A Collection to filter against this instance."
             ],
             "Returns": "{Collection}"
         },
         {
             "Value": "difference",
             "Flags": [],
-            "Line": 343,
+            "Line": 319,
             "Description": "Returns a new Collection containing items where the key is present in one of the original structures, but not the other.",
             "Params": [
-                "{Collection} Secondary A Collection to filter against this instance."
+                "{Collection} secondary A Collection to filter against this instance."
             ],
             "Returns": "{Collection}"
         },
         {
             "Value": "tap",
             "Flags": [],
-            "Line": 353,
+            "Line": 331,
             "Description": "Passes this Collection into a function and returns the Collection itself.",
             "Params": [
-                "{Function} Fn Function used to execute on the Collection."
+                "{Function} indenter Function used to execute on the Collection."
             ],
             "Returns": "{Collection}"
         },
         {
             "Value": "each",
             "Flags": [],
-            "Line": 363,
+            "Line": 341,
             "Description": "Synchronously iterates through this Collection's item and returns itself.",
             "Params": [
-                "{Function} Fn Function to execute on each element."
+                "{Function} iterator Function to execute on each element."
             ],
             "Returns": "{Collection}"
         },
         {
             "Value": "sort",
             "Flags": [],
-            "Line": 374,
+            "Line": 352,
             "Description": "Sorts all the items in this Collection and returns itself.",
             "Params": [
-                "{Function} Fn Function that determines the sort order."
+                "{Function} orderer Function that determines the sort order."
             ],
             "Returns": "{Collection}"
         }
@@ -257,49 +267,49 @@
         {
             "Value": "default",
             "Flags": [],
-            "Line": 25,
+            "Line": 18,
             "Description": "Ensures an entry being in this Cache map.",
             "Params": [
-                "{*} Key Specifies the address for the value.",
-                "{*} Value A value to be conditionally inserted."
+                "{*} keyContext Specifies the address for the value.",
+                "{*} value A value to be conditionally inserted."
             ],
             "Returns": "{Boolean} Whether or not a new value was inserted."
         }
     ],
     "ActiveCache": [
         {
-            "Value": "_eventEmitter",
+            "Value": "_emitter",
             "Flags": [
                 "Variable",
                 "Private"
             ],
-            "Line": 23,
+            "Line": 18,
             "Description": "An event manager for this ActiveCache.",
             "Type": "{EventEmitter}"
-        },
-        {
-            "Value": "on",
-            "Flags": [],
-            "Line": 35,
-            "Description": "Registers a handler for this ActiveCache.",
-            "Params": [
-                "{Event} Event An event to handle.",
-                "{Function} Handler A handler for this registered event."
-            ],
-            "Returns": "{ActiveCache}"
         },
         {
             "Value": "",
             "Flags": [
                 "Typedef"
             ],
-            "Line": 64,
-            "Description": "Current types of events. ",
+            "Line": 27,
+            "Description": "Current types of events.",
             "Typedef": "{String} Event",
             "Params": [
                 "{String} set",
                 "{String} delete"
             ]
+        },
+        {
+            "Value": "on",
+            "Flags": [],
+            "Line": 34,
+            "Description": "Registers a handler for this ActiveCache.",
+            "Params": [
+                "{Event} event An event to handle.",
+                "{Function} handler A handler for this registered event."
+            ],
+            "Returns": "{ActiveCache}"
         }
     ],
     "BaseManager": [
@@ -319,72 +329,72 @@
                 "Variable",
                 "ReadOnly"
             ],
-            "Line": 32,
+            "Line": 31,
             "Description": "A structure belonging to this Manager.",
             "Type": "{Function?}"
         },
         {
             "Value": "add",
             "Flags": [],
-            "Line": 46,
+            "Line": 40,
             "Description": "Inserts an instance into this Manager's cache.",
             "Params": [
-                "{String} Id Identifier string for the address of this model.",
-                "{Function|*} Model A data model to add to this Manager."
+                "{String} identifier Identifier string for the address of this model.",
+                "{Function|*} model A data model to add to this Manager."
             ],
             "Returns": "{Manager}"
         },
         {
             "Value": "remove",
             "Flags": [],
-            "Line": 61,
+            "Line": 55,
             "Description": "Removes an instance from this Manager's cache.",
             "Params": [
-                "{String} Id Identifier string of the instance."
+                "{String} identifier Identifier string of the instance."
             ],
             "Returns": "{Manager}"
         },
         {
             "Value": "resolve",
             "Flags": [],
-            "Line": 74,
+            "Line": 68,
             "Description": "Resolves an instance of this Manager.",
             "Params": [
-                "{String|Function|*} IdOrInstance Identifier to resolve from this Manager."
+                "{String|Function|*} idOrInstance Identifier to resolve from this Manager."
             ],
             "Returns": "{Function|*} A data model resolved from this Manager's cache."
         }
     ],
     "DataStore": [
         {
+            "Value": "",
+            "Flags": [
+                "Typedef"
+            ],
+            "Line": 18,
+            "Description": "An entry of this DataStore.",
+            "Typedef": "{Function|Object} DataModel"
+        },
+        {
             "Value": "set",
             "Flags": [],
-            "Line": 25,
+            "Line": 23,
             "Description": "Inserts or updates a model.",
             "Params": [
-                "{String|Number} Key Key of the model to be inserted.",
-                "{Function|Object|DataModel} Model The data model to set into the DataStore."
+                "{String|Number} keyContext Key of the model to be inserted.",
+                "{Function|Object|DataModel} model The data model to set into the DataStore."
             ],
             "Returns": "{DataStore}"
         },
         {
             "Value": "resolve",
             "Flags": [],
-            "Line": 37,
+            "Line": 35,
             "Description": "Resolves a data model.",
             "Params": [
-                "{String|Number} Key Key of the model to be resolved."
+                "{String|Number} keyContext Key of the model to be resolved."
             ],
             "Returns": "{DataModel} Model that got resolved or cached."
-        },
-        {
-            "Value": "",
-            "Flags": [
-                "Typedef"
-            ],
-            "Line": 52,
-            "Description": "An entry of this DataStore.",
-            "Typedef": "{Function|Object} DataModel"
         }
     ]
 }

@@ -19,30 +19,30 @@ const DS = new Qulity.DataStore(Iterable?);
 
 | Key | Type | Description |
 | --- | --- | --- |
-| Iterable? | Array, Object | Optional initial values of this DataStore. |
+| iterable? | Array, Object | Optional initial values of this DataStore. |
 
 
 
 # Methods
-## [.set(Key, Model)](https://github.com/QSmally/Qulity/blob/master/lib/Managers/DataStore.js#L25)
+## [.set(keyContext, model)](https://github.com/QSmally/Qulity/blob/master/lib/Managers/DataStore.js#L23)
 > Inserts or updates a model.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | Key | String, Number | Key of the model to be inserted. |
-> | Model | Function, Object, DataModel | The data model to set into the DataStore. |
+> | keyContext | String, Number | Key of the model to be inserted. |
+> | model | Function, Object, DataModel | The data model to set into the DataStore. |
 >
 > Returns **{DataStore}** 
 
-## [.resolve(Key)](https://github.com/QSmally/Qulity/blob/master/lib/Managers/DataStore.js#L37)
+## [.resolve(keyContext)](https://github.com/QSmally/Qulity/blob/master/lib/Managers/DataStore.js#L35)
 > Resolves a data model.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | Key | String, Number | Key of the model to be resolved. |
+> | keyContext | String, Number | Key of the model to be resolved. |
 >
 > Returns **{DataModel}** Model that got resolved or cached.
 
 # Typedefs
-## [DataModel](https://github.com/QSmally/Qulity/blob/master/lib/Managers/DataStore.js#L52)
+## [DataModel](https://github.com/QSmally/Qulity/blob/master/lib/Managers/DataStore.js#L18)
 > An entry of this DataStore.
 >
 > Type **{Function|Object}**

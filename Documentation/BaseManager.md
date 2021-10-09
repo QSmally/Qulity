@@ -18,8 +18,8 @@ class MyManager extends Qulity.Manager
 
 | Key | Type | Description |
 | --- | --- | --- |
-| Iterable? | Array, Object | Optional initial values of this Manager. |
-| Holds? | Function | An optional data stricture belonging to this Manager. @implements Collection |
+| iterable? | Array, Object | Optional initial values of this Manager. |
+| holds? | Function | An optional data stricture belonging to this Manager. @implements Collection |
 
 
 
@@ -29,33 +29,33 @@ class MyManager extends Qulity.Manager
 >
 > Type **{Collection}**
 
-## [.holds](https://github.com/QSmally/Qulity/blob/master/lib/Managers/BaseManager.js#L32)
+## [.holds](https://github.com/QSmally/Qulity/blob/master/lib/Managers/BaseManager.js#L31)
 > A structure belonging to this Manager. [**Read Only**]
 >
 > Type **{Function?}**
 
 # Methods
-## [.add(Id, Model)](https://github.com/QSmally/Qulity/blob/master/lib/Managers/BaseManager.js#L46)
+## [.add(identifier, model)](https://github.com/QSmally/Qulity/blob/master/lib/Managers/BaseManager.js#L40)
 > Inserts an instance into this Manager's cache.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | Id | String | Identifier string for the address of this model. |
-> | Model | Function, Any | A data model to add to this Manager. |
+> | identifier | String | Identifier string for the address of this model. |
+> | model | Function, Any | A data model to add to this Manager. |
 >
 > Returns **{Manager}** 
 
-## [.remove(Id)](https://github.com/QSmally/Qulity/blob/master/lib/Managers/BaseManager.js#L61)
+## [.remove(identifier)](https://github.com/QSmally/Qulity/blob/master/lib/Managers/BaseManager.js#L55)
 > Removes an instance from this Manager's cache.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | Id | String | Identifier string of the instance. |
+> | identifier | String | Identifier string of the instance. |
 >
 > Returns **{Manager}** 
 
-## [.resolve(IdOrInstance)](https://github.com/QSmally/Qulity/blob/master/lib/Managers/BaseManager.js#L74)
+## [.resolve(idOrInstance)](https://github.com/QSmally/Qulity/blob/master/lib/Managers/BaseManager.js#L68)
 > Resolves an instance of this Manager.
 > | Key | Type | Description |
 > | --- | --- | --- |
-> | IdOrInstance | String, Function, Any | Identifier to resolve from this Manager. |
+> | idOrInstance | String, Function, Any | Identifier to resolve from this Manager. |
 >
 > Returns **{Function|Any}** A data model resolved from this Manager's cache.
